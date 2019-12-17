@@ -6,11 +6,13 @@ $white: #fff;
 $black: #000;
 $maroon: #83333e;
 $off-white: #f2f4f5;
+$background: #fcf4ec;
 
 html,
 body {
   font-family: $font;
   font-size: 16px;
+  background-color: $background;
 }
 
 .container {
@@ -66,5 +68,52 @@ header {
         }
       }
     }
+  }
+}
+
+//Banner
+.banner {
+  display: flex;
+  align-items: center;
+  background-color: $white;
+  position: relative;
+  height: 100vh;
+  background-color: $background;
+  .row {
+    position: relative;
+    .main-text {
+      font-size: 5.8rem;
+      text-transform: uppercase;
+      letter-spacing: 42px;
+      font-weight: 700;
+      color: $white;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+      mix-blend-mode: difference;
+      z-index: 9;
+      @media (max-width: 1440px) {
+        font-size: 4.4rem;
+        letter-spacing: 36px;
+      }
+    }
+    .main-image {
+      width: 1920px;
+      margin: 0 auto;
+      @media (max-width: 1440px) {
+        width: 1080px;
+      }
+    }
+  }
+  .scroll {
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: $black;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 48px;
   }
 }
