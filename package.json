@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "sydrawat",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "personal website",
   "version": "0.1.0",
   "author": "Siddharth Rawat <siddharth.rawatbkp@gmail.com>",
   "dependencies": {
@@ -23,6 +23,9 @@
     "smooth-scrollbar": "^8.5.1"
   },
   "devDependencies": {
+    "commitizen": "^4.1.2",
+    "cz-conventional-changelog": "^3.2.0",
+    "cz-emoji": "^1.2.1",
     "prettier": "^1.19.1"
   },
   "keywords": [
@@ -36,13 +39,17 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "commit":"git cz",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
+  "repository": "https://github.com/sydrawat/sydrawat",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "main": "index.js",
+  "config": {
+    "commitizen": {
+      "path": "cz-emoji"
+    }
   }
 }

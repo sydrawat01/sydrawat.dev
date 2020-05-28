@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 const Banner = () => {
   const data = useStaticQuery(graphql`
     query {
-      workhero: file(relativePath: { eq: "remote-work.jpg" }) {
+      hero: file(relativePath: { eq: "gatsby-astronaut.png" }) {
         childImageSharp {
           fluid(maxWidth: 1920) {
             ...GatsbyImageSharpFluid
@@ -19,13 +19,10 @@ const Banner = () => {
     <div className="banner">
       <div className="container">
         <div className="row">
-          <div className="main-text">Sid's Profile</div>
+          <div className="main-text">Gatsby</div>
           <div className="main-image">
-            <Img fluid={data.workhero.childImageSharp.fluid} />
+            <Img fluid={data.hero.childImageSharp.fluid} />
           </div>
-        </div>
-        <div className="scroll">
-          <span>Scroll Down</span>
         </div>
       </div>
     </div>
