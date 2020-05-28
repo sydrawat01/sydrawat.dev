@@ -1,5 +1,5 @@
 {
-  "extends": ["airbnb", "prettier"],
+  "extends": ["airbnb", "airbnb/hooks", "prettier"],
   "plugins": ["prettier", "import", "react", "jsx-a11y"],
   "env": {
     "browser": true,
@@ -16,11 +16,15 @@
     "no-process-exit": "off",
     "object-shorthand": "off",
     "class-methods-use-this": "off",
-    "no-shadow": "warn"
+    "no-shadow": "warn",
+    "react/button-has-type": "off",
+    "react/jsx-one-expression-per-line":["warn",{ "allow": "single-child" }],
+    "react/no-did-update-set-state": "off",
+    "prefer-destructuring": "off",
+    "react/jsx-filename-extension": "off",
+    "react/prop-types": "off",
+    "import/no-named-as-default": "off",
+    "import/no-named-as-default-member": "off"
   },
-  "parser": "babel-eslint",
-  "parserOptions": {
-    "sourceType": "module",
-    "allowImportExportEverywhere": true
-  }
+  "parser": "babel-eslint"
 }
