@@ -24,7 +24,7 @@ const config = {
       link: '/me/',
     },
     {
-      name: 'Articles',
+      name: 'Blogs',
       link: '/blog/',
     },
     {
