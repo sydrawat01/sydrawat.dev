@@ -3,20 +3,25 @@ import { Link } from 'gatsby';
 import netlify from '../../content/images/netlify.png';
 import gatsby from '../../content/thumbnails/gatsby.png';
 import github from '../../content/images/github.png';
+import kofi from '../../content/images/ko-fi.png';
+import ig from '../../content/images/ig.svg';
+import twitter from '../../content/images/twitter.svg';
 
 const Footer = () => {
   return (
     <footer className="footer container">
       <div>
-        <a href="https://twitter.com/sydrawat" target="_blank" rel="noopener noreferrer">
-          Twitter
-        </a>
-        <a href="https://instagram.com/sydrawat" target="_blank" rel="noopener noreferrer">
-          Instagram
-        </a>
-        <Link to="/contact/">Contact</Link>
+        <Link to="/contact/">&copy; 2020 Siddharth Rawat</Link>
       </div>
       <div>
+        <a
+          href="https://ko-fi.com/sydrawat"
+          title="Buy me a Ko-Fi"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={kofi} className="footer-img" alt="GitHub" />
+        </a>
         <a
           href="https://github.com/sydrawat"
           title="Open-source on GitHub"
@@ -24,6 +29,14 @@ const Footer = () => {
           rel="noopener noreferrer"
         >
           <img src={github} className="footer-img" alt="GitHub" />
+        </a>
+        <a
+          href="https://www.instagram.com/sydrawat"
+          title="Artsy me!"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={ig} className="footer-img" alt="Netlify" />
         </a>
         <a
           href="https://www.netlify.com/"
@@ -38,9 +51,17 @@ const Footer = () => {
           title="Built with Gatsby"
           target="_blank"
           rel="noopener noreferrer"
-          style={{ marginRight: 0 }}
         >
           <img src={gatsby} className="footer-img" alt="Gatsby" />
+        </a>
+        <a
+          href="https://www.twitter.com/sydrawat"
+          title="Follow me on Twitter"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ marginRight: 0 }}
+        >
+          <img src={twitter} className="footer-img" alt="Gatsby" />
         </a>
       </div>
     </footer>

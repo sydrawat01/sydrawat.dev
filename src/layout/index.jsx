@@ -1,35 +1,40 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-
+import React, { Component } from 'react';
+import { Helmet } from 'react-helmet';
 import ThemeContext from '../context/ThemeContext';
-import config from '../../data/SiteConfig';
 import Navigation from '../components/navigation';
 import Footer from '../components/footer';
+import config from '../../data/SiteConfig';
+import favicon from '../images/favicon.png';
 import '../styles/main.scss';
 
-const Layout = ({ children }) => (
-  <>
-    <ThemeContext.Consumer>
-      {theme => (
-        <div
-          className={theme.dark ? 'dark' : 'light'}
-          style={{
-            margin: `0 auto`,
-            padding: `0px 0.1rem 0.1rem`,
-            paddingTop: 0,
+export default class MainLayout extends Component {
+  static contextType = ThemeContext; // eslint-disable-line
+
+  render() {
+    const { dark, notFound } = this.context;
+    const { children } = this.props;
+    let themeClass = '';
+
+    if (dark && !notFound) {
+      themeClass = 'dark';
+    } else if (notFound) {
+      themeClass = 'not-found';
+    }
+
+    return (
+      <>
+        <Helmet
+          bodyAttributes={{
+            class: `theme ${themeClass}`,
           }}
         >
-          <Navigation menuLinks={config.menuLinks} />
-          <main id="main-content">{children}</main>
-          <Footer />
-        </div>
-      )}
-    </ThemeContext.Consumer>
-  </>
-);
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-};
-
-export default Layout;
+          <meta name="description" content={config.siteDescription} />
+          <link rel="shortcut icon" type="image/png" href={favicon} />
+        </Helmet>
+        <Navigation menuLinks={config.menuLinks} />
+        <main id="main-content">{children}</main>
+        <Footer />
+      </>
+    );
+  }
+}
