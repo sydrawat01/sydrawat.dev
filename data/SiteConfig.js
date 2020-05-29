@@ -33,7 +33,7 @@ const config = {
     },
   ],
   themeColor: '#3F80FF', // Used for setting manifest and progress theme colors.
-  backgroundColor: '#ffffff',
+  backgroundColor: '#f0f0f0',
 };
 
 // Make sure pathPrefix is empty if not needed

@@ -9,7 +9,7 @@ const IndexPage = () => (
     <div className="container">
       <div className="lead">
         <div className="elevator">
-          <h1>Hey I am Sid</h1>
+          <h1>Hey, I am Sid</h1>
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis aperiam voluptas
             dolorum expedita natus quibusdam quaerat adipisci magni molestias nesciunt. Ut porro
