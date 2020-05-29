@@ -8,7 +8,6 @@
 
   &.scroll {
     box-shadow: 1px 2px 18px rgba(0, 0, 0, 0.1);
-    overflow: auto;
   }
 
   .cta {
@@ -26,7 +25,6 @@
     align-items: center;
     justify-content: space-between;
     transition: height 0.3s ease;
-    overflow: hidden;
   }
 
   .brand {
@@ -80,9 +78,9 @@
 }
 
 .favicon {
-  height: 23px;
-  width: 23px;
-  min-width: 23px;
+  height: 40px;
+  width: 40px;
+  min-width: 40px;
   margin-right: 1rem;
   margin-bottom: 0;
 }
