@@ -24,7 +24,8 @@
     "react/jsx-filename-extension": "off",
     "react/prop-types": "off",
     "import/no-named-as-default": "off",
-    "import/no-named-as-default-member": "off"
+    "import/no-named-as-default-member": "off",
+    "import/prefer-default-export": "warn"
   },
   "parser": "babel-eslint"
 }

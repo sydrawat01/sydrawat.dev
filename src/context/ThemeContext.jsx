@@ -2,43 +2,60 @@ import React, { Component } from 'react';
 
 const defaultState = {
   dark: false,
+  notFound: false,
   toggleDark: () => {},
 };
 
 const ThemeContext = React.createContext(defaultState);
 
-// Getting dark mode information from OS!
-// You need macOS Mojave + Safari Technology Preview Release 68 to test this currently.
-const supportsDarkMode = () => window.matchMedia('(prefers-color-scheme: dark)').matches === true;
-
 class ThemeProvider extends Component {
-  state = {
-    dark: false,
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      dark: false,
+      notFound: false,
+    };
+  }
 
   componentDidMount() {
-    // Getting dark mode value from localStorage!
     const lsDark = JSON.parse(localStorage.getItem('dark'));
+
     if (lsDark) {
       this.setState({ dark: lsDark });
-    } else if (supportsDarkMode()) {
-      this.setState({ dark: true });
+    }
+  }
+
+  componentDidUpdate(prevState) {
+    const { dark } = this.state;
+
+    if (prevState.dark !== dark) {
+      localStorage.setItem('dark', JSON.stringify(dark));
     }
   }
 
   toggleDark = () => {
-    const dark = !this.state.dark;
-    localStorage.setItem('dark', JSON.stringify(dark));
-    this.setState({ dark });
+    this.setState(prevState => ({ dark: !prevState.dark }));
+  };
+
+  setNotFound = () => {
+    this.setState({ notFound: true });
+  };
+
+  setFound = () => {
+    this.setState({ notFound: false });
   };
 
   render() {
     const { children } = this.props;
-    const { dark } = this.state;
+    const { dark, notFound } = this.state;
+
     return (
       <ThemeContext.Provider
         value={{
           dark,
+          notFound,
+          setFound: this.setFound,
+          setNotFound: this.setNotFound,
           toggleDark: this.toggleDark,
         }}
       >
