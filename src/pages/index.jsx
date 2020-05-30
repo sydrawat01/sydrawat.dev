@@ -1,12 +1,15 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import Layout from '../layout';
 import SEO from '../components/seo';
+import config from '../../data/SiteConfig';
 import sid from '../../content/images/sid1994.jpg';
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <Helmet title={`${config.siteTitle} – Software Engineer`} />
+    <SEO />
     <div className="container">
       <div className="lead">
         <div className="elevator">
