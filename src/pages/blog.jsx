@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
+import { Link } from 'gatsby';
 import ThemeContext from '../context/ThemeContext';
 import Layout from '../layout';
 import SEO from '../components/seo';
@@ -11,16 +12,25 @@ export default class Blog extends Component {
   render() {
     return (
       <Layout>
-        <Helmet title={`Blog – ${config.siteTitle}`} />
+        <Helmet title={`Articles – ${config.siteTitle}`} />
         <SEO />
         <div className="container">
           <div className="lead">
             <div className="elevator">
-              <h2>Blogs</h2>
+              <h2>Articles</h2>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis aperiam voluptas
                 dolorum expedita natus quibusdam quaerat adipisci magni molestias nesciunt. Ut porro
                 magni at dicta accusantium neque veniam? Velit, molestiae.
+              </p>
+              <Link to="/test">
+                <h4>This is a test blog!</h4>
+              </Link>
+              <h3>Article titles</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque culpa quaerat nobis
+                est quos maiores voluptatibus cum deserunt dolor optio inventore beatae eveniet eum
+                doloremque dicta modi, dolore adipisci a?
               </p>
             </div>
           </div>
