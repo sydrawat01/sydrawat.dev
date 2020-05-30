@@ -10,6 +10,7 @@ module.exports = {
     author: `@sydrawat`,
   },
   plugins: [
+    `gatsby-plugin-mdx`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
