@@ -28,5 +28,9 @@
     "import/no-named-as-default-member": "off",
     "import/prefer-default-export": "warn"
   },
-  "parser": "babel-eslint"
+  "parser": "babel-eslint",
+  "overrides": [{
+    "files": "*.mdx",
+    "extends": "plugin:mdx/recommended"
+  }]
 }
