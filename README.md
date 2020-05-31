@@ -44,7 +44,7 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 
 ## Acknowledgements
 
-- Tania Rascia - Heavy inspiration from [taniarascia.com](https://taniarascia.com)
+- Tania Rascia - Complete inspiration from [taniarascia.com](https://taniarascia.com) : [repo](https://github.com/taniarascia/taniarascia)
 - Muhammad Muhsin - [Using React Context API with Gatsby](https://www.gatsbyjs.org/blog/2019-01-31-using-react-context-api-with-gatsby/)
 - Thomas Wang - [How to convert an existing Gatsby blog to use MDX](https://www.gatsbyjs.org/blog/2019-11-21-how-to-convert-an-existing-gatsby-blog-to-use-mdx/)
 
