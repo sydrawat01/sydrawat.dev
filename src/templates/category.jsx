@@ -36,10 +36,19 @@ export const pageQuery = graphql`
             slug
             date
           }
+          excerpt
+          timeToRead
           frontmatter {
             title
             tags
             categories
+            thumbnail {
+              childImageSharp {
+                fixed(width: 150, height: 150) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
             date
           }
         }

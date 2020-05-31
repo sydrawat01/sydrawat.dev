@@ -12,6 +12,7 @@ export default class PostListing extends Component {
       return {
         path: postEdge.node.fields.slug,
         tags: postEdge.node.frontmatter.tags,
+        thumbnail: postEdge.node.frontmatter.thumbnail,
         title: postEdge.node.frontmatter.title,
         date: postEdge.node.fields.date,
         excerpt: postEdge.node.excerpt,

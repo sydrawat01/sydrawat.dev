@@ -40,6 +40,8 @@ export const pageQuery = graphql`
   query PageBySlug($slug: String!) {
     mdx(fields: { slug: { eq: $slug } }) {
       body
+      timeToRead
+      excerpt
       frontmatter {
         title
       }

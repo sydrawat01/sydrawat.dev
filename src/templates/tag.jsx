@@ -26,7 +26,6 @@ export default class TagTemplate extends Component {
     );
   }
 }
-
 export const pageQuery = graphql`
   query TagPage($tag: String) {
     allMdx(
@@ -41,10 +40,19 @@ export const pageQuery = graphql`
             slug
             date
           }
+          excerpt
+          timeToRead
           frontmatter {
             title
             tags
             categories
+            thumbnail {
+              childImageSharp {
+                fixed(width: 150, height: 150) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
             date
           }
         }

@@ -8,7 +8,7 @@ import UserInfo from '../components/UserInfo';
 import PostTags from '../components/PostTags';
 import SEO from '../components/seo';
 import config from '../../data/SiteConfig';
-import { formatDate, editOnGithub } from '../utils/global';
+import { formatDate } from '../utils/global';
 import sid from '../../content/images/sid1994.jpg';
 
 export default class PostTemplate extends Component {
@@ -77,8 +77,17 @@ export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     mdx(fields: { slug: { eq: $slug } }) {
       body
+      timeToRead
+      excerpt
       frontmatter {
         title
+        thumbnail {
+          childImageSharp {
+            fixed(width: 150, height: 150) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
         date
         categories
         tags
