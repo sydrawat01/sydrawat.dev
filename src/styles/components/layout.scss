@@ -936,6 +936,17 @@ blockquote {
 
 .search {
   margin-bottom: 0;
+  display: block;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  padding: .75rem;
+  outline: none;
+  margin-bottom: .5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  width: 100%;
+  max-width: 100%;
+  line-height: 1;
 }
 
 .filter-count {
