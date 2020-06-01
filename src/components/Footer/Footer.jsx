@@ -11,9 +11,9 @@ const Footer = () => {
   return (
     <footer className="footer container">
       <div>
-        <Link to="/contact/">Contact</Link>
         <a href="https://taniarascia.com" target="_blank" rel="noopener noreferrer">Design</a>
-        <a href="https://github.com/sydrawat/sydrawat/issues" target="_blank" rel="noopener noreferrer">Issue</a>
+        <a href="https://github.com/sydrawat/sydrawat/issues/new/" target="_blank" rel="noopener noreferrer">Issues</a>
+        <Link to="/contact/">Contact</Link>
       </div>
       <div>
         <a
