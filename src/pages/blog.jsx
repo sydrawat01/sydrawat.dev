@@ -42,16 +42,8 @@ export default class BlogPage extends Component {
       <Layout>
         <Helmet title={`Articles – ${config.siteTitle}`} />
         <SEO />
-        <div className="gradient-section articles">
-          <div className="container">
-            <h2 className="text-center">The Missing Instruction Manuals of the Web</h2>
-            <div className="instruction-manuals">
-              <h3>test</h3>
-            </div>
-          </div>
-        </div>
         <div className="container">
-          <h1 className="articles-title">Articles</h1>
+          <h2 className="articles-title">Articles</h2>
           <div className="category-container">
             {categories.map(category => {
               return (

@@ -2,9 +2,9 @@ const config = {
   siteTitle: 'Siddharth Rawat', // Site title.
   siteTitleShort: 'sydrawat', // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
   siteTitleAlt: 'Siddharth Rawat', // Alternative site title for SEO.
-  siteLogo: '/logos/logo-1024.png', // Logo used for SEO and manifest.
-  siteUrl: 'https://sydrawat-netlify.app', // Domain of your website without pathPrefix.
-  pathPrefix: '/gatsby-advanced-starter', // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
+  siteLogo: '/src/images/hash.svg', // Logo used for SEO and manifest.
+  siteUrl: 'https://sydrawat.netlify.app', // Domain of your website without pathPrefix.
+  pathPrefix: '/sydrawat', // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription: 'home@syd', // Website description used for RSS feeds/meta description tag.
   siteRss: '/rss.xml', // Path to the RSS file.
   postDefaultCategoryID: 'Tech', // Default category for posts.
@@ -48,7 +48,6 @@ const config = {
       iconClassName: 'fa fa-envelope',
     },
   ],
-  copyright: 'Copyright © 2019. Advanced User', // Copyright string for the footer of the website and RSS feed.
   themeColor: '#C7A27C', // Used for setting manifest and progress theme colors.
   backgroundColor: '#EEE8E8', // Used for setting manifest background color.
 };
@@ -64,11 +63,9 @@ if (config.pathPrefix === '/') {
 }
 
 // Make sure siteUrl doesn't have an ending forward slash
-if (config.siteUrl.substr(-1) === '/')
-  config.siteUrl = config.siteUrl.slice(0, -1);
+if (config.siteUrl.substr(-1) === '/') config.siteUrl = config.siteUrl.slice(0, -1);
 
 // Make sure siteRss has a starting forward slash
-if (config.siteRss && config.siteRss[0] !== '/')
-  config.siteRss = `/${config.siteRss}`;
+if (config.siteRss && config.siteRss[0] !== '/') config.siteRss = `/${config.siteRss}`;
 
 module.exports = config;
