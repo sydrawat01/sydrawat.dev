@@ -31,10 +31,7 @@ class PostListing extends React.Component {
             thumbnail = post.thumbnail.childImageSharp.fixed;
           }
 
-          // const popular = post.categories.includes('Popular');
           const date = formatDate(post.date);
-          // const date = post.date;
-          // const newest = moment(post.date) > moment().subtract(1, 'months');
 
           return (
             <Link to={post.path} key={post.title}>
