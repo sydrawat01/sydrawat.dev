@@ -9,7 +9,7 @@ const config = {
   siteRss: '/rss.xml', // Path to the RSS file.
   postDefaultCategoryID: 'Tech', // Default category for posts.
   dateFromFormat: 'YYYY-MM-DD', // Date format used in the frontmatter.
-  dateFormat: 'DD/MM/YYYY', // Date format for display.
+  dateFormat: 'MMMM DD, YYYY', // Date format for display.
   userName: 'sydrawat', // Username to display in the author segment.
   userEmail: 'siddharth.rawat94@gmail.com', // Email used for RSS feed's author segment
   userTwitter: 'sydrawat', // Optionally renders "Follow Me" in the UserInfo segment.
