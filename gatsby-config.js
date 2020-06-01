@@ -10,10 +10,7 @@ module.exports = {
       feed_url: urljoin(config.siteUrl, config.pathPrefix, config.siteRss),
       title: config.siteTitle,
       description: config.siteDescription,
-      image_url: `${urljoin(
-        config.siteUrl,
-        config.pathPrefix
-      )}/logos/logo-512.png`,
+      image_url: `${urljoin(config.siteUrl, config.pathPrefix)}/logos/logo-512.png`,
       copyright: config.copyright,
     },
   },
@@ -56,12 +53,6 @@ module.exports = {
           'gatsby-remark-autolink-headers',
           'gatsby-remark-prismjs',
         ],
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: config.googleAnalyticsID,
       },
     },
     {
@@ -118,7 +109,7 @@ module.exports = {
           {
             serialize(ctx) {
               const { rssMetadata } = ctx.query.site.siteMetadata;
-              return ctx.query.allMarkdownRemark.edges.map((edge) => ({
+              return ctx.query.allMarkdownRemark.edges.map(edge => ({
                 categories: edge.node.frontmatter.tags,
                 date: edge.node.fields.date,
                 title: edge.node.frontmatter.title,
@@ -136,7 +127,7 @@ module.exports = {
             },
             query: `
             {
-              allMarkdownRemark(
+              allMdx(
                 limit: 1000,
                 sort: { order: DESC, fields: [fields___date] },
               ) {
