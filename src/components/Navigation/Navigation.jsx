@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from 'gatsby';
-import board from '../images/motherboard.svg';
-import sun from '../images/sun.svg';
-import moon from '../images/moon.svg';
-import ThemeContext from '../context/ThemeContext';
+import board from '../../images/nerd.svg';
+import sun from '../../images/sun.svg';
+import moon from '../../images/moon.svg';
+import ThemeContext from '../../context/ThemeContext';
 
 export default class Navigation extends Component {
-  static contextType = ThemeContext // eslint-disable-line
+  static contextType = ThemeContext; // eslint-disable-line
 
   constructor(props) {
     super(props);
@@ -46,7 +46,7 @@ export default class Navigation extends Component {
             </Link>
           </div>
           <div className="links">
-            {menuLinks.map(link => (
+            {menuLinks.map((link) => (
               <Link key={link.name} to={link.link} activeClassName="active">
                 {link.name}
               </Link>

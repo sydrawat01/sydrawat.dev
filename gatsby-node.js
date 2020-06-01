@@ -1,71 +1,21 @@
+/* eslint "no-console": "off" */
+
 const path = require('path');
-const kebabCase = require('lodash.kebabcase');
+const _ = require('lodash');
 const moment = require('moment');
-const sharp = require('sharp');
 const siteConfig = require('./data/SiteConfig');
-
-sharp.simd(false);
-sharp.cache(false);
-
-const postNodes = [];
-
-function addSiblingNodes(createNodeField) {
-  postNodes.sort(({ frontmatter: { date: date1 } }, { frontmatter: { date: date2 } }) => {
-    const dateA = moment(date1, siteConfig.dateFromFormat);
-    const dateB = moment(date2, siteConfig.dateFromFormat);
-
-    if (dateA.isBefore(dateB)) return 1;
-    if (dateB.isBefore(dateA)) return -1;
-
-    return 0;
-  });
-
-  for (let i = 0; i < postNodes.length; i += 1) {
-    const nextID = i + 1 < postNodes.length ? i + 1 : 0;
-    const prevID = i - 1 >= 0 ? i - 1 : postNodes.length - 1;
-    const currNode = postNodes[i];
-    const nextNode = postNodes[nextID];
-    const prevNode = postNodes[prevID];
-
-    createNodeField({
-      node: currNode,
-      name: 'nextTitle',
-      value: nextNode.frontmatter.title,
-    });
-
-    createNodeField({
-      node: currNode,
-      name: 'nextSlug',
-      value: nextNode.fields.slug,
-    });
-
-    createNodeField({
-      node: currNode,
-      name: 'prevTitle',
-      value: prevNode.frontmatter.title,
-    });
-
-    createNodeField({
-      node: currNode,
-      name: 'prevSlug',
-      value: prevNode.fields.slug,
-    });
-  }
-}
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
   let slug;
-
   if (node.internal.type === 'Mdx') {
     const fileNode = getNode(node.parent);
     const parsedFilePath = path.parse(fileNode.relativePath);
-
     if (
       Object.prototype.hasOwnProperty.call(node, 'frontmatter') &&
       Object.prototype.hasOwnProperty.call(node.frontmatter, 'title')
     ) {
-      slug = `/${kebabCase(node.frontmatter.title)}/`;
+      slug = `/${_.kebabCase(node.frontmatter.title)}`;
     } else if (parsedFilePath.name !== 'index' && parsedFilePath.dir !== '') {
       slug = `/${parsedFilePath.dir}/${parsedFilePath.name}/`;
     } else if (parsedFilePath.dir === '') {
@@ -76,9 +26,11 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
     if (Object.prototype.hasOwnProperty.call(node, 'frontmatter')) {
       if (Object.prototype.hasOwnProperty.call(node.frontmatter, 'slug'))
-        slug = `/${node.frontmatter.slug}/`;
+        slug = `/${_.kebabCase(node.frontmatter.slug)}`;
       if (Object.prototype.hasOwnProperty.call(node.frontmatter, 'date')) {
-        const date = new Date(node.frontmatter.date);
+        const date = moment(node.frontmatter.date, siteConfig.dateFromFormat);
+        if (!date.isValid)
+          console.warn(`WARNING: Invalid date.`, node.frontmatter);
 
         createNodeField({
           node,
@@ -88,111 +40,110 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       }
     }
     createNodeField({ node, name: 'slug', value: slug });
-    postNodes.push(node);
   }
 };
 
-exports.setFieldsOnGraphQLNodeType = ({ type, actions }) => {
-  const { name } = type;
-  const { createNodeField } = actions;
-  if (name === 'Mdx') {
-    addSiblingNodes(createNodeField);
-  }
-};
-
-exports.createPages = ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
+  const postPage = path.resolve('src/templates/post.jsx');
+  const tagPage = path.resolve('src/templates/tag.jsx');
+  const categoryPage = path.resolve('src/templates/category.jsx');
 
-  return new Promise((resolve, reject) => {
-    const postPage = path.resolve('src/templates/post.jsx');
-    const pagePage = path.resolve('/src/templates/page.jsx');
-    const tagPage = path.resolve('src/templates/tag.jsx');
-    const categoryPage = path.resolve('src/templates/category.jsx');
-
-    resolve(
-      graphql(
-        `
-          {
-            allMdx {
-              edges {
-                node {
-                  frontmatter {
-                    tags
-                    categories
-                  }
-                  fields {
-                    slug
-                  }
-                }
+  const markdownQueryResult = await graphql(
+    `
+      {
+        allMdx {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+                tags
+                category
+                date
               }
             }
           }
-        `,
-      ).then(result => {
-        if (result.errors) {
-          console.log(result.errors);
-          reject(result.errors);
         }
+      }
+    `
+  );
 
-        const tagSet = new Set();
-        const categorySet = new Set();
+  if (markdownQueryResult.errors) {
+    console.error(markdownQueryResult.errors);
+    reporter.panic('error querying: ', markdownQueryResult.errors);
+    throw markdownQueryResult.errors;
+  }
 
-        result.data.allMdx.edges.forEach(edge => {
-          if (edge.node.frontmatter.tags) {
-            edge.node.frontmatter.tags.forEach(tag => {
-              tagSet.add(tag);
-            });
-          }
+  const tagSet = new Set();
+  const categorySet = new Set();
 
-          if (edge.node.frontmatter.categories) {
-            edge.node.frontmatter.categories.forEach(category => {
-              categorySet.add(category);
-            });
-          }
+  const postsEdges = markdownQueryResult.data.allMdx.edges;
 
-          if (edge.node.frontmatter.template === 'post') {
-            createPage({
-              path: edge.node.fields.slug,
-              component: postPage,
-              context: {
-                slug: edge.node.fields.slug,
-              },
-            });
-          }
-
-          if (edge.node.frontmatter.template === 'page') {
-            createPage({
-              path: edge.node.fields.slug,
-              component: pagePage,
-              context: {
-                slug: edge.node.fields.slug,
-              },
-            });
-          }
-        });
-
-        const tagList = Array.from(tagSet);
-        tagList.forEach(tag => {
-          createPage({
-            path: `/tags/${kebabCase(tag)}/`,
-            component: tagPage,
-            context: {
-              tag,
-            },
-          });
-        });
-
-        const categoryList = Array.from(categorySet);
-        categoryList.forEach(category => {
-          createPage({
-            path: `/categories/${category.toLowerCase()}/`,
-            component: categoryPage,
-            context: {
-              category,
-            },
-          });
-        });
-      }),
+  postsEdges.sort((postA, postB) => {
+    const dateA = moment(
+      postA.node.frontmatter.date,
+      siteConfig.dateFromFormat
     );
+
+    const dateB = moment(
+      postB.node.frontmatter.date,
+      siteConfig.dateFromFormat
+    );
+
+    if (dateA.isBefore(dateB)) return 1;
+    if (dateB.isBefore(dateA)) return -1;
+
+    return 0;
+  });
+
+  postsEdges.forEach((edge, index) => {
+    if (edge.node.frontmatter.tags) {
+      edge.node.frontmatter.tags.forEach((tag) => {
+        tagSet.add(tag);
+      });
+    }
+
+    if (edge.node.frontmatter.category) {
+      categorySet.add(edge.node.frontmatter.category);
+    }
+
+    const nextID = index + 1 < postsEdges.length ? index + 1 : 0;
+    const prevID = index - 1 >= 0 ? index - 1 : postsEdges.length - 1;
+    const nextEdge = postsEdges[nextID];
+    const prevEdge = postsEdges[prevID];
+
+    createPage({
+      path: edge.node.fields.slug,
+      component: postPage,
+      context: {
+        slug: edge.node.fields.slug,
+        nexttitle: nextEdge.node.frontmatter.title,
+        nextslug: nextEdge.node.fields.slug,
+        prevtitle: prevEdge.node.frontmatter.title,
+        prevslug: prevEdge.node.fields.slug,
+      },
+    });
+  });
+
+  tagSet.forEach((tag) => {
+    createPage({
+      path: `/tags/${_.kebabCase(tag)}/`,
+      component: tagPage,
+      context: {
+        tag,
+      },
+    });
+  });
+  categorySet.forEach((category) => {
+    createPage({
+      path: `/categories/${_.kebabCase(category)}/`,
+      component: categoryPage,
+      context: {
+        category,
+      },
+    });
   });
 };

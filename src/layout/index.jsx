@@ -1,40 +1,39 @@
-import React, { Component } from 'react';
-import { Helmet } from 'react-helmet';
-import ThemeContext from '../context/ThemeContext';
-import Navigation from '../components/navigation';
-import Footer from '../components/footer';
-import config from '../../data/SiteConfig';
-import favicon from '../images/favicon.png';
-import '../styles/main.scss';
+import React from "react";
+import Helmet from "react-helmet";
+import config from "../../data/SiteConfig";
+import Navigation from "../components/Navigation/Navigation";
+import ThemeContext from "../context/ThemeContext";
+import Footer from "../components/Footer/Footer";
+import "../styles/main.scss";
 
-export default class MainLayout extends Component {
-  static contextType = ThemeContext; // eslint-disable-line
+export default class MainLayout extends React.Component {
+  static contextType = ThemeContext;
 
   render() {
     const { dark, notFound } = this.context;
     const { children } = this.props;
-    let themeClass = '';
+    let themeClass = "";
 
     if (dark && !notFound) {
-      themeClass = 'dark';
+      themeClass = "dark";
     } else if (notFound) {
-      themeClass = 'not-found';
+      themeClass = "not-found";
     }
 
     return (
-      <>
+      <div>
         <Helmet
           bodyAttributes={{
-            class: `theme ${themeClass}`,
+            class: `theme ${themeClass}`
           }}
         >
           <meta name="description" content={config.siteDescription} />
-          <link rel="shortcut icon" type="image/png" href={favicon} />
+          <html lang="en" />
         </Helmet>
         <Navigation menuLinks={config.menuLinks} />
         <main id="main-content">{children}</main>
         <Footer />
-      </>
+      </div>
     );
   }
 }

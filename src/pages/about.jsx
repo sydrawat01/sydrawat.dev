@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
 import ThemeContext from '../context/ThemeContext';
 import Layout from '../layout';
-import SEO from '../components/seo';
+import SEO from '../components/SEO/SEO';
 import config from '../../data/SiteConfig';
 
 export default class Me extends Component {

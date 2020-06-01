@@ -4,11 +4,11 @@ import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import Layout from '../layout';
-import UserInfo from '../components/UserInfo';
-import PostTags from '../components/PostTags';
-import SEO from '../components/seo';
+import UserInfo from '../components/UserInfo/UserInfo';
+import {formatDate} from '../utils/global'
+import PostTags from '../components/PostTags/PostTags';
+import SEO from '../components/SEO/SEO';
 import config from '../../data/SiteConfig';
-import { formatDate } from '../utils/global';
 import sid from '../../content/images/sid1994.jpg';
 
 export default class PostTemplate extends Component {
@@ -31,6 +31,7 @@ export default class PostTemplate extends Component {
     }
 
     const date = formatDate(post.date);
+    // const date = post.date;
     const twitterShare = `http://twitter.com/share?text=${encodeURIComponent(post.title)}&url=${
       config.siteUrl
     }/${post.slug}/&via=sydrawat`;
@@ -81,15 +82,7 @@ export const pageQuery = graphql`
       excerpt
       frontmatter {
         title
-        thumbnail {
-          childImageSharp {
-            fixed(width: 150, height: 150) {
-              ...GatsbyImageSharpFixed
-            }
-          }
-        }
         date
-        categories
         tags
       }
       fields {

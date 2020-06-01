@@ -1,58 +1,29 @@
-import React, { Component } from 'react';
-import { Helmet } from 'react-helmet';
-import { graphql } from 'gatsby';
-import Layout from '../layout';
-import PostListing from '../components/PostListing';
-import config from '../../data/SiteConfig';
+import React from "react";
+import Helmet from "react-helmet";
+import { graphql } from "gatsby";
+import Layout from "../layout";
+import PostListing from "../components/PostListing/PostListing";
+import config from "../../data/SiteConfig";
 
-export default class CategoryTemplate extends Component {
-  render() {
-    const { category } = this.props.pageContext;
-    const postEdges = this.props.data.allMdx.edges;
+const CategoryTemplate = ({ pageContext }) => {
+  /*
+  const { category } = this.props.pageContext;
+  // ! post edges is coming from graphql so I did not added them in the import...
+  const postEdges = this.props.data.allMarkdownRemark.edges;
+  */
+  // ! change it back later
+  const category = "";
+  const postEdges = [];
+  // ! add REACT-HELMET back once you have categories!!! as of now it shows null
 
-    return (
-      <Layout>
-        <Helmet title={`Posts in category "${category}" – ${config.siteTitle}`} />
-        <div className="container">
-          <h1>{category}</h1>
-          <PostListing postEdges={postEdges} />
-        </div>
-      </Layout>
-    );
-  }
-}
+  return (
+    <div className="category-container">
+      {/* <Helmet
+        title={`Posts in category "${category}" | ${config.siteTitle}`}
+      /> */}
+      <PostListing postEdges={postEdges} />
+    </div>
+  );
+};
 
-export const pageQuery = graphql`
-  query CategoryPage($category: String) {
-    allMdx(
-      limit: 1000
-      sort: { fields: [fields___date], order: DESC }
-      filter: { frontmatter: { categories: { in: [$category] } } }
-    ) {
-      totalCount
-      edges {
-        node {
-          fields {
-            slug
-            date
-          }
-          excerpt
-          timeToRead
-          frontmatter {
-            title
-            tags
-            categories
-            thumbnail {
-              childImageSharp {
-                fixed(width: 150, height: 150) {
-                  ...GatsbyImageSharpFixed
-                }
-              }
-            }
-            date
-          }
-        }
-      }
-    }
-  }
-`;
+export default CategoryTemplate;

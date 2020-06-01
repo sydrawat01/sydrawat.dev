@@ -3,8 +3,8 @@ import { Helmet } from 'react-helmet';
 import { graphql, Link } from 'gatsby';
 
 import Layout from '../layout';
-import PostListing from '../components/PostListing';
-import SEO from '../components/seo';
+import PostListing from '../components/PostListing/PostListing';
+import SEO from '../components/SEO/SEO';
 import config from '../../data/SiteConfig';
 
 export default class BlogPage extends Component {
@@ -45,6 +45,9 @@ export default class BlogPage extends Component {
         <div className="gradient-section articles">
           <div className="container">
             <h2 className="text-center">The Missing Instruction Manuals of the Web</h2>
+            <div className="instruction-manuals">
+              <h3>test</h3>
+            </div>
           </div>
         </div>
         <div className="container">
@@ -94,21 +97,13 @@ export const pageQuery = graphql`
           frontmatter {
             title
             tags
-            categories
-            thumbnail {
-              childImageSharp {
-                fixed(width: 50, height: 50) {
-                  ...GatsbyImageSharpFixed
-                }
-              }
-            }
             date
           }
         }
       }
     }
     categories: allMdx(limit: 2000) {
-      group(field: frontmatter___categories) {
+      group(field: frontmatter___category) {
         fieldValue
         totalCount
       }

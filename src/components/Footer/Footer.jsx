@@ -1,17 +1,19 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import netlify from '../../content/images/netlify.png';
-import gatsby from '../../content/thumbnails/gatsby.png';
-import github from '../../content/images/github.png';
-import kofi from '../../content/images/ko-fi.png';
-import ig from '../../content/images/ig.svg';
-import twitter from '../../content/images/twitter.svg';
+import netlify from '../../../content/images/netlify.png';
+import gatsby from '../../../content/thumbnails/gatsby.png';
+import github from '../../../content/images/github.png';
+import kofi from '../../../content/images/ko-fi.png';
+import ig from '../../../content/images/ig.svg';
+import twitter from '../../../content/images/twitter.svg';
 
 const Footer = () => {
   return (
     <footer className="footer container">
       <div>
-        <Link to="/contact/">&copy; 2020 Siddharth Rawat</Link>
+        <Link to="/contact/">Contact</Link>
+        <a href="https://taniarascia.com" target="_blank" rel="noopener noreferrer">Design</a>
+        <a href="https://github.com/sydrawat/sydrawat/issues" target="_blank" rel="noopener noreferrer">Issue</a>
       </div>
       <div>
         <a

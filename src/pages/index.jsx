@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 
 import Layout from '../layout';
-import SEO from '../components/seo';
+import SEO from '../components/SEO/SEO';
 import config from '../../data/SiteConfig';
 import sid from '../../content/images/sid1994.jpg';
 
