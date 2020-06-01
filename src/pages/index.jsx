@@ -30,12 +30,12 @@ const IndexPage = () => (
             A few skills that I'm still updating everyday
           </p>
           <div className="skills">
-            <img src={reactjs} alt="react"/>
-            <img src={graphql} alt="gql"/>
-            <img src={javascript} alt="js"/>
-            <img src={npm} alt="npm"/>
-            <img src={sass} alt="sass"/>
-            <img src={python} alt="py"/>
+            <img src={reactjs} alt="react" title="ReactJS"/>
+            <img src={graphql} alt="gql" title="GraphQL"/>
+            <img src={javascript} alt="js"  title="Javascript"/>
+            <img src={npm} alt="npm"  title="Node Package Manager"/>
+            <img src={sass} alt="sass"  title="SASS"/>
+            <img src={python} alt="py"  title="Python"/>
           </div>
         </div>
         <div className="flashcard-section">

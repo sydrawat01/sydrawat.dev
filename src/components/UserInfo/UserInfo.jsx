@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import sid from '../../../content/images/sid1994.jpg';
-import patreon from '../../../content/thumbnails/gatsby.png';
+import kofi from '../../../content/images/ko-fi-user.png';
+import patreon from '../../../content/images/patreon-user.jpg';
 
 export default class UserInfo extends Component {
   render() {
@@ -12,7 +13,7 @@ export default class UserInfo extends Component {
               <img className="avatar" src={sid} alt="Siddharth Rascia" />
             </div>
             <div>
-              <h3>Author</h3>
+              <h3>About the author</h3>
               <p>
                 Hey, I’m Sid, a full stack software engineer. I write about what I know to help
                 viewers like you. My site has <strong>no ads, sponsors, or bullshit.</strong> If you
@@ -26,7 +27,7 @@ export default class UserInfo extends Component {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img src={patreon} className="coffee-icon" alt="Coffee icon" />
+                  <img src={kofi} className="coffee-icon" alt="Coffee icon" />
                   Buy me a coffee
                 </a>
                 <a
