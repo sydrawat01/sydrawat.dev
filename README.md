@@ -57,7 +57,7 @@ This is my personal `profile cum blog` where I write down my thought and notes a
 
 This project is open source and available under the [MIT License](./LICENSE).
 
-## :nut_and_bolt:  Creating Issues :wrench
+## :nut_and_bolt:  Creating Issues :wrench:
 
 Before you create an issue, please go through the [Code of Conduct](https://github.com/sydrawat/sydrawat-issues/blob/master/CODE_OF_CONDUCT.md) and follow the structure of [template](https://github.com/sydrawat/sydrawat-issues/tree/master/.github/ISSUE_TEMPLATE) provided for raising an issue.
 
