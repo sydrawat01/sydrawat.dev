@@ -48,7 +48,7 @@ export default class Contact extends Component {
                 </ul>
               </div>
               <h4 style={{fontWeight: "lighter", fontSize: 1.3+'rem'}}>
-                Found an issue on the site? <a href="https://github.com/sydrawat/sydrawat-issues/issues/new" target="_blank" rel="noopener noreferrer">Let me know!</a>
+                Found an issue on the site? <a href="https://github.com/sydrawat/sydrawat-issues/issues/new/choose" target="_blank" rel="noopener noreferrer">Let me know!</a>
               </h4>
             </div>
           </div>
