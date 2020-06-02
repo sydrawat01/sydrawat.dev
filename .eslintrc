@@ -1,6 +1,6 @@
 {
-  "extends": ["airbnb", "airbnb/hooks", "prettier", "plugin:mdx/recommended"],
-  "plugins": ["prettier", "import", "react", "jsx-a11y"],
+  "extends": ["airbnb", "airbnb/hooks", "prettier"],
+  "plugins": ["prettier", "import", "react", "jsx-a11y", "mdx/recommended"],
   "env": {
     "browser": true,
     "node": true,
@@ -30,9 +30,7 @@
     "import/no-named-as-default-member": "off",
     "import/prefer-default-export": "warn"
   },
-  "parser": "babel-eslint",
-  "overrides": [{
-    "files": "*.mdx",
-    "extends": "plugin:mdx/recommended"
-  }]
+  "parserOptions": {
+    "parser": "babel-eslint"
+  }
 }
