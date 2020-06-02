@@ -1,13 +1,42 @@
+.gatsby-highlight {
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+}
+.gatsby-highlight pre[class*="language-"] {
+  -webkit-overflow-scrolling: touch;
+}
+.gatsby-highlight pre[class*="language-"]::before {
+  background: black;
+  border-radius: 0 0 0.25rem 0.25rem;
+  color: white;
+  font-size: 12px;
+  letter-spacing: 0.025rem;
+  padding: 0.1rem 0.5rem;
+  position: absolute;
+  right: 1rem;
+  text-align: right;
+  text-transform: uppercase;
+  top: 0;
+}
+.gatsby-highlight pre[class="language-js"]::before {
+  content: "js";
+  background: #f7df1e;
+  color: black;
+}
+
 .nav {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 3;
-  background: white;
+  background: $reading;
+  border-color: $reading;
 
   &.scroll {
     box-shadow: 1px 2px 18px rgba(0, 0, 0, 0.1);
+    background: darken($reading, 5%);
+    border-color: darken($reading, 5%);
   }
 
   .cta {
@@ -78,9 +107,9 @@
 }
 
 .favicon {
-  height: 40px;
-  width: 40px;
-  min-width: 40px;
+  height: 30px;
+  width: 30px;
+  min-width: 30px;
   margin-right: 1rem;
   margin-bottom: 0;
 }
@@ -113,7 +142,7 @@ button.dark-switcher {
     }
 
     .nav-container {
-      height: 160px;
+      height: 100px;
       padding: 0 2rem;
     }
 

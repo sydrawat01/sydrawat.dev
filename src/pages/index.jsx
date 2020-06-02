@@ -43,7 +43,7 @@ const IndexPage = () => (
           <div>
             <h3>Sid</h3>
             <p>
-              Yep! That's me attending business meetings since '94.
+              Attending business meetings since '94.
             </p>
           </div>
         </div>

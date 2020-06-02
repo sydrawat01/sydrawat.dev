@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
-import {Link} from 'gatsby';
 import ThemeContext from '../context/ThemeContext';
 import Layout from '../layout';
 import SEO from '../components/SEO/SEO';
@@ -19,13 +18,13 @@ export default class Me extends Component {
             <div>
               <h2>whoami</h2>
               <p>
-                I'm Sid, a freelance software developer mostly working in front-end development with <Link to="https://reactjs.org">React</Link>. I'm currently experimenting around with <Link to="https://graphql.org">GraphQL</Link> and <Link to="https://mongodb.com">MongoDB</Link> as backend technologies to eventually transition into a full-stack developer.
+                I'm Sid, a freelance software developer mostly working in front-end development with <a href="https://reactjs.org">React</a>. I'm currently experimenting around with <a href="https://graphql.org">GraphQL</a> and <a href="https://mongodb.com">MongoDB</a> as backend technologies to eventually transition into a full-stack developer.
               </p>
               <h3>Getting to know me</h3>
               <p>
-                I was born and raised in Dehradun before moving to Bangalore, India. I've done my engineering in Computer Science from <Link to="https://manipal.edu/mu.html">Manipal University</Link>.
+                I was born and raised in Dehradun before moving to Bangalore, India. I've done my engineering in Computer Science from <a href="https://manipal.edu/mu.html">Manipal University</a>.
               </p>
-              <p>I graduated in 2017 and have been employed as a senior software developer at <Link to="https://www.wipro.com/en-IN/">Wipro</Link>. I also dedicate my free time to learning creating stuff and learning new things on the web.</p>
+              <p>I graduated in 2017 and have been employed as a senior software developer at <a href="https://www.wipro.com/en-IN/">Wipro</a>. I also dedicate my free time to learning creating stuff and learning new things on the web.</p>
               <p>
                 I also like doodling in my free time. I guess I'll post some here as well!
               </p>
@@ -36,20 +35,20 @@ export default class Me extends Component {
                 </li>
                 <li>
                   Host:
-                  <Link to="https://app.netlify.com"> Netlify</Link>
+                  <a href="https://app.netlify.com"> Netlify</a>
                 </li>
                 <li>
                   Editor:
-                  <Link to="https://code.visualstudio.com"> VSCode</Link>
+                  <a href="https://code.visualstudio.com"> VSCode</a>
                 </li>
                 <li>
                   Static Site Generator:
-                  <Link to="https://gatsbyjs.org"> Gatsby</Link>
+                  <a href="https://gatsbyjs.org"> Gatsby</a>
                 </li>
               </ul>
             </div>
             <div>
-              <h4 style={{fontWeight: "lighter", fontSize: 1.3+'rem'}}>Special thanks to <Link to="https://taniarascia.com">Tania Rascia</Link> for the heavy inspiration for this site!</h4>
+              <h4 style={{fontWeight: "lighter", fontSize: 1.3+'rem'}}>Special thanks to <a href="https://taniarascia.com">Tania Rascia</a> for the heavy inspiration for this site!</h4>
             </div>
           </div>
         </div>

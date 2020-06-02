@@ -14,6 +14,7 @@ html {
 body {
   color: $font-color;
   font-size: 1rem;
+  background: $reading;
 }
 
 @include small-breakpoint {

@@ -3,7 +3,7 @@
   =============== */
 
   code {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   pre.language-terminal code.language-terminal {
@@ -17,7 +17,7 @@
     margin: 2rem 0;
     font-size: 13px;
     background: white;
-    color: #333;
+    color: #282c34;
 
     &::before {
       content: '\2022 \2022 \2022';
@@ -63,7 +63,7 @@
     display: block;
     padding: 1.5rem;
     overflow: auto;
-    background-color: #333;
+    background-color: #282c34;
     border: 0;
     box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.15);
   }
@@ -74,7 +74,7 @@
     border: 2px solid rgba(0, 0, 0, 0.3);
     border-radius: 3px;
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px white inset;
-    color: #333;
+    color: #282c34;
     display: inline-block;
     font-family: $font-family;
     line-height: 1.4;

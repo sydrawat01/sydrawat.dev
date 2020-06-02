@@ -2,10 +2,10 @@ const config = {
   siteTitle: 'Siddharth Rawat', // Site title.
   siteTitleShort: 'sydrawat', // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
   siteTitleAlt: 'Siddharth Rawat', // Alternative site title for SEO.
-  siteLogo: '/src/images/hash.svg', // Logo used for SEO and manifest.
+  siteLogo: '/src/images/stickie.svg', // Logo used for SEO and manifest.
   siteUrl: 'https://sydrawat.netlify.app', // Domain of your website without pathPrefix.
   pathPrefix: '/sydrawat', // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
-  siteDescription: 'home@syd', // Website description used for RSS feeds/meta description tag.
+  siteDescription: "Sid's website and blog", // Website description used for RSS feeds/meta description tag.
   siteRss: '/rss.xml', // Path to the RSS file.
   postDefaultCategoryID: 'Tech', // Default category for posts.
   dateFromFormat: 'YYYY-MM-DD', // Date format used in the frontmatter.

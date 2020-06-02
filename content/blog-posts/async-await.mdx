@@ -1,0 +1,237 @@
+---
+title: "Async & Await : JS Magic"
+date: 2020-06-02
+template: post
+timestamp: "Jun 2020"
+repo : "https://github.com/sydrawat"
+slug: async-await
+thumbnail: "../thumbnails/js.png"
+tags:
+  - Async
+  - Await
+category:
+  - "Javascript"
+---
+
+The `async` and `await` are the most dreaded thing one can find while learning Javascript. I like to take things in an easier fashion, for better understanding!
+
+### The `async` keyword
+
+- Async functions are syntactical sugar for promises.
+- Async functions always return a promise.
+- The _async_ keyword in front of a function will force the function to return a promise.
+- If the function returns a value, the promise will be resolved with that value
+- If the function throws an exception, the promise will be rejected.
+- Use _then()_ and _catch()_ in a similar way on the function call as we do in Fetch and Axios.
+
+```js
+async function hello (){
+    return 'What up doe!';
+}
+hello();
+// Promise {<resolved>: 'What up doe!'}
+
+async function uhOh() {
+    thow new Error('oh no!');
+}
+uhOh();
+//Promise {<rejected>: Error: oh no!}
+```
+
+### The `await` Keyword
+
+We put the _await_ keyword inside the async function and it will pause the execution of the function and wait till the promise is resolved.
+
+- We can only use the _await_ keyword inside the function declared with _async_.
+- _await_ will pause the execution of the async function, waiting for the promise to be resolved.
+- We don't have to use _then()_ function calls and chain mulitple requests, we can use the _await_ keyword to first execute the _get()_ or _fetch()_ calls and then only when the promise is resolved from these function calls, we do something with the data.
+- We would see `Promise {<pending>}` first, and then when this promise is resolved, we get the desired result on the operation we have performed.
+- Once the promise is resolved, the value with which it is resolved is available in the variable we store it in.
+
+```js
+async function getPlanets() {
+  const res = await axios.get('https://swapi.co/api/planets');
+  console.log(res.data);
+}
+
+getPlanets();
+```
+
+_Ex_ : When we log the parsed JSON object `res.data`, we get:
+
+`{count: 61, next: "https://swapi.co/api/planets/?page=2", previous: null, results: Array(10)}`
+
+## Error handling in async functions
+
+There are 2 ways to handle errors in async functions:
+
+### 1. Using `catch()` with the callback function
+
+```js
+getPlanets().catch(err => {
+  console.log('inside catch');
+  console.log(err);
+});
+```
+
+### 2. Using `try` and `catch` in the async function
+
+```js
+async function getPlanets() {
+  try {
+    const res = await axios.get('https://swapi.co/api/planets');
+    console.log(res.data);
+  } catch (e) {
+    console.log('In catch : ', e);
+  }
+}
+```
+
+## Multiple awaits
+
+We can chain multiple requests one after another using the `await` keyword on a function that returns a promise.
+
+```js
+async function animateRight(el, amt) {
+  await moveX(el, amt, 1000);
+  await moveX(el, amt, 1000);
+  await moveX(el, amt, 1000);
+  await moveX(el, amt, 1000);
+  await moveX(el, amt, 1000);
+  await moveX(el, amt, 1000);
+  await moveX(el, amt, 1000);
+  await moveX(el, amt, 1000);
+  await moveX(el, amt, 1000);
+}
+
+animateRight(btn, 100).catch(err => {
+  console.log('ALL DONE!!');
+  animateRight(btn, -100);
+});
+```
+
+## Parallel vs. Sequential Requests
+
+### Sequential Requests
+
+In sequential requests, we will wait till the first request is resolved, and only then move to the next request. So here, if any of the request fails, the remaining requests are dependent on the other requests, and will **not be executed**.
+
+```js
+async function getPokemon() {
+  const poke1 = await axios.get('https://pokeapi.co/api/v2/pokemon/1');
+  const poke2 = await axios.get('https://pokeapi.co/api/v2/pokemon/2');
+  const poke3 = await axios.get('https://pokeapi.co/api/v2/pokemon/3');
+  console.log(poke1.data);
+  console.log(poke2.data);
+  console.log(poke3.data);
+}
+
+getPokemon();
+```
+
+In this example, if the request in `poke1` has problems in fetching the data from the API, then the dependent requests on `poke2` and `poke3` are not executed and we **cannot** get the data from that _get()_ Axios call.
+
+### Parallel Requests
+
+All the requests are being sent at the same instance of time, so they are simultaneously being sent as fast as JS can prase and send those requests.
+
+The requests do not wait for one another to be resolved and only then send the request. The requests are sent independent of the resolution of the promise from the request, irrespective of the other requests failing.
+
+```js
+async function getPokemon() {
+  const prom1 = axios.get('https://pokeapi.co/api/v2/pokemon/1');
+  const prom2 = axios.get('https://pokeapi.co/api/v2/pokemon/2');
+  const prom3 = axios.get('https://pokeapi.co/api/v2/pokemon/3');
+  const poke1 = await prom1;
+  const poke2 = await prom2;
+  const poke3 = await prom3;
+  console.log(poke1.data);
+  console.log(poke2.data);
+  console.log(poke3.data);
+}
+
+getPokemon();
+```
+
+This method is better if we are not dependent on the other requsts being resolved.
+
+The below examples will make it more clearer:
+
+```js
+//Example
+function changeBodyColor(color, delay) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      document.body.style.backgroundColor = color;
+      resolve();
+    }, delay);
+  });
+}
+
+//SERIAL
+/** Here, each of the colors are displayed on the screen */
+async function lightShow1() {
+  await changeBodyColor('teal', 1000);
+  await changeBodyColor('lightpink', 1000);
+  await changeBodyColor('indigo', 1000);
+  await changeBodyColor('yellow', 1000);
+}
+
+lightShow1();
+
+//PARALLEL
+/** Here, since every request is sent at the same time in parallel, we see only the last request to set the body color to 'yellow' */
+async function lightShow2() {
+  const p1 = changeBodyColor('teal', 1000);
+  const p2 = changeBodyColor('lightpink', 1000);
+  const p3 = changeBodyColor('indigo', 1000);
+  const p4 = changeBodyColor('yellow', 1000);
+  await p1;
+  await p2;
+  await p3;
+  await p4;
+}
+
+lightShow2();
+```
+
+## `Promise.all()` for refactoring
+
+This is a helper method for when we are sending the requests in parallel, we need to assign a lot of variables to the promise, the await, etc. as in the below example:
+
+```js
+async function getPokemon() {
+  const prom1 = axios.get('https://pokeapi.co/api/v2/pokemon/1');
+  const prom2 = axios.get('https://pokeapi.co/api/v2/pokemon/2');
+  const prom3 = axios.get('https://pokeapi.co/api/v2/pokemon/3');
+  const poke1 = await prom1;
+  const poke2 = await prom2;
+  const poke3 = await prom3;
+  console.log(poke1.data);
+  console.log(poke2.data);
+  console.log(poke3.data);
+}
+
+getPokemon();
+```
+
+So, `Promise.all()` accepts an array of promises. We can then use `await` on this for parallel resolution.
+
+Upon being resolved, we get the value objects in an array, which we can access easily.
+
+```js
+async function getPokemon() {
+  const prom1 = axios.get('https://pokeapi.co/api/v2/pokemon/1');
+  const prom2 = axios.get('https://pokeapi.co/api/v2/pokemon/2');
+  const prom3 = axios.get('https://pokeapi.co/api/v2/pokemon/3');
+  const results = await Promise.all([prom1, prom2, prom3]);
+  printPokemon(results);
+}
+
+const printPokemon = results => {
+  for (let pokemon of results) {
+    console.log(pokemon.data.name);
+  }
+};
+getPokemon();
+```

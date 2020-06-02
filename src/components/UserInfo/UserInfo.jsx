@@ -15,9 +15,10 @@ export default class UserInfo extends Component {
             <div>
               <h3>About the author</h3>
               <p>
-                Hey, I’m Sid, a full stack software engineer. I write about what I know to help
-                viewers like you. My site has <strong>no ads, sponsors, or bullshit.</strong> If you
-                enjoy my content, please consider supporting what I do!
+                Hey, I’m Sid, a software engineer. If you liked this post enough to donate a coffee or beome a patron, I'd be really grateful!
+              </p>
+              <p>
+                Thanks for reading, have a nice day!
               </p>
 
               <div className="flex">

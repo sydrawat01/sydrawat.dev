@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'gatsby';
-import board from '../../images/hash.svg';
+import board from '../../images/stickie.svg';
 import sun from '../../images/sun.svg';
 import moon from '../../images/moon.svg';
 import ThemeContext from '../../context/ThemeContext';

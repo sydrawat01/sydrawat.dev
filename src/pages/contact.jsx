@@ -4,7 +4,6 @@ import ThemeContext from '../context/ThemeContext';
 import Layout from '../layout';
 import SEO from '../components/SEO/SEO';
 import config from '../../data/SiteConfig';
-import {Link} from 'gatsby';
 import github from '../../content/images/github.png';
 import kofi from '../../content/images/ko-fi-user.png';
 import twitter from '../../content/images/twitter.svg';
@@ -29,12 +28,28 @@ export default class Contact extends Component {
               <p>
                 Hit me up wherever you feel like.
               </p>
-              <div className="sup">
-                <img src={github} alt="Github" title="Github"/>
-                <img src={twitter} alt="Twitter" title="Twitter"/>
-                <img src={kofi} alt="Ko-Fi" title="Ko-Fi"/>
-                <img src={patreon} alt="Patreon" title="Patreon"/>
+              <div>
+                <ul>
+                  <li>
+                    <a href="https://github.com/sydrawat" target="_blank" rel="noopener noreferrer">
+                      Github
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://ko-fi.com/sydrawat" target="_blank" rel="noopener noreferrer">
+                      Ko-Fi
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://linkedin.com/in/siddharth-rawat" target="_blank" rel="noopener noreferrer">
+                      LinkedIn
+                    </a>
+                  </li>
+                </ul>
               </div>
+              <h4 style={{fontWeight: "lighter", fontSize: 1.3+'rem'}}>
+                Found an issue on the site? <a href="https://github.com/sydrawat/sydrawat/issues/new" target="_blank" rel="noopener noreferrer">Let me know!</a>
+              </h4>
             </div>
           </div>
         </div>
