@@ -878,7 +878,7 @@ blockquote {
   .note-container {
     background: radial-gradient(circle at 20% 20%, #ffd68a 25%, rgb(148, 118, 88) 100%);
     box-shadow: 0.5rem 1.25rem 1.75rem 0 rgba(100, 110, 140, 0.4);
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(32, 32, 32, 0.9);
     border-radius: $border-radius;
     padding: 2rem;
     display: flex;
@@ -895,7 +895,7 @@ blockquote {
   }
 
   h3 {
-    color: white;
+    color: rgb(32, 32, 32);
   }
 
   p {

@@ -13,7 +13,7 @@
 
 This is my personal `profile cum blog` where I write down my thought and notes about the interisting stuff I'm learning about the web everyday!
 
-## 🚀 Quick start
+## :rocket:  Quick start
 
 1. **Clone the repo**
 
@@ -42,17 +42,25 @@ This is my personal `profile cum blog` where I write down my thought and notes a
 
     _Note: You'll also see a second link:_`http://localhost:8000/___graphql`_. This is the GraphiQL tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
-## Acknowledgements
+## :busts_in_silhouette:  Acknowledgements
 
 - Ruben Harutyunyan - [Gatsby Advanced Starter](https://github.com/Vagr9K/gatsby-advanced-starter/tree/master/content)
-- Tania Rascia - Complete inspiration from [taniarascia.com](https://taniarascia.com) : [source](https://github.com/taniarascia/taniarascia)
+- Tania Rascia - Heavy inspiration from [taniarascia.com](https://taniarascia.com) [[source]](https://github.com/taniarascia/taniarascia)
 - Muhammad Muhsin - [Using React Context API with Gatsby](https://www.gatsbyjs.org/blog/2019-01-31-using-react-context-api-with-gatsby/)
 - Thomas Wang - [How to convert an existing Gatsby blog to use MDX](https://www.gatsbyjs.org/blog/2019-11-21-how-to-convert-an-existing-gatsby-blog-to-use-mdx/)
 
-## Author
+## :bust_in_silhouette:  Author
 
-- [Siddharth Rawat](https://sydrawat.netlify.app)
+- :feelsgood:  [Siddharth Rawat](https://sydrawat.netlify.app)
 
-## License
+## :page_with_curl:  License
 
 This project is open source and available under the [MIT License](./LICENSE).
+
+## :nut_and_bolt:  Creating Issues :wrench
+
+Before you create an issue, please go through the [Code of Conduct](https://github.com/sydrawat/sydrawat-issues/blob/master/CODE_OF_CONDUCT.md) and follow the structure of [template](https://github.com/sydrawat/sydrawat-issues/tree/master/.github/ISSUE_TEMPLATE) provided for raising an issue.
+
+Thanks for reporting the problem!
+
+##### &copy; 2020, Siddharth Rawat

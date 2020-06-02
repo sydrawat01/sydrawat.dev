@@ -12,10 +12,13 @@ export default class UserInfo extends Component {
             <div className="flex-avatar">
               <img className="avatar" src={sid} alt="Siddharth Rascia" />
             </div>
-            <div>
+            <div className ="few-words">
               <h3>About the author</h3>
               <p>
-                Hey, I’m Sid, a software engineer. If you liked this post enough to donate a coffee or beome a patron, I'd be really grateful!
+                Hey, I’m Sid, a front-end software engineer.
+              </p>
+              <p>
+                If you liked this post, consider donating!
               </p>
               <p>
                 Thanks for reading, have a nice day!

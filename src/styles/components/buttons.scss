@@ -84,6 +84,7 @@ a.button.muted-bottom {
 // Secondary button color
 .donate-button,
 a.donate-button {
+  transition: all 0.4s ease;
   display: inline-flex;
   align-items: center;
   border-radius: $border-radius;
@@ -95,7 +96,8 @@ a.donate-button {
   &:hover,
   &:focus,
   &:active {
-    background: darken($primary-color, 10%);
+    transform: scale(1.1);
+    background: $primary-color;
     border: none;
     color: white;
   }
@@ -118,6 +120,7 @@ a.twitter-button {
 // Secondary button color
 .patreon-button,
 a.patreon-button {
+  transition: all 0.4s ease;
   display: inline-flex;
   align-items: center;
   border-radius: $border-radius;
@@ -125,7 +128,7 @@ a.patreon-button {
   background: #f96854;
   padding: 0 1rem;
   color: #fff !important;
-  margin: 0 0.5rem;
+  margin: 0 .5rem;
 
   img {
     margin: 0;
@@ -134,8 +137,9 @@ a.patreon-button {
   &:hover,
   &:focus,
   &:active {
+    transform: scale(1.1);
     background: #f96854 !important;
-    border: 2px solid darken(#f96854, 15%);
+    border: 2px solid #f96854;
     color: #fff !important;
   }
 }
