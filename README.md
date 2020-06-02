@@ -1,50 +1,51 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
+  <a href="https://sydrawat.netlify.app">
+    <img alt="sydrawat" src="./src/images/stickie.svg" width="60" />
   </a>
 </p>
 <h1 align="center">
-  Gatsby's default starter
+  sydrawat
 </h1>
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/d6bfe026-2092-462a-99c7-45efeec9eca0/deploy-status)](https://app.netlify.com/sites/sydrawat/deploys)
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
-
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+This is my personal `profile cum blog` where I write down my thought and notes about the interisting stuff I'm learning about the web everyday!
 
 ## 🚀 Quick start
 
-1. **Create a Gatsby site.**
-
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+1. **Clone the repo**
 
     ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
+    git clone https://github.com/sydrawat/sydrawat.git
     ```
 
-1. **Start developing.**
+2. **Install dependencies**
 
-    Navigate into your new site’s directory and start it up.
+    Navigate into the site’s directory and install the dependencies.
 
     ```shell
-    cd my-default-starter/
-    gatsby develop
+    yarn
     ```
 
-1. **Open the source code and start editing!**
+3. **Start developing.**
 
-    Your site is now running at `http://localhost:8000`!
+    ```shell
+    cd sydrawat/
+    yarn develop
+    ```
 
-    _Note: You'll also see a second link:_`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+4. **View your site!**
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+    The site is now running at `http://localhost:8000`!
+
+    _Note: You'll also see a second link:_`http://localhost:8000/___graphql`_. This is the GraphiQL tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
 ## Acknowledgements
 
-- Tania Rascia - Complete inspiration from [taniarascia.com](https://taniarascia.com) : [repo](https://github.com/taniarascia/taniarascia)
+- Ruben Harutyunyan - [Gatsby Advanced Starter](https://github.com/Vagr9K/gatsby-advanced-starter/tree/master/content)
+- Tania Rascia - Complete inspiration from [taniarascia.com](https://taniarascia.com) : [source](https://github.com/taniarascia/taniarascia)
 - Muhammad Muhsin - [Using React Context API with Gatsby](https://www.gatsbyjs.org/blog/2019-01-31-using-react-context-api-with-gatsby/)
 - Thomas Wang - [How to convert an existing Gatsby blog to use MDX](https://www.gatsbyjs.org/blog/2019-11-21-how-to-convert-an-existing-gatsby-blog-to-use-mdx/)
 
