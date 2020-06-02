@@ -10,6 +10,7 @@ import PostTags from '../components/PostTags/PostTags';
 import SEO from '../components/SEO/SEO';
 import config from '../../data/SiteConfig';
 import sid from '../../content/images/sid1994.jpg';
+import twitter from '../../content/images/twitter.svg';
 
 export default class PostTemplate extends Component {
   render() {
@@ -31,7 +32,6 @@ export default class PostTemplate extends Component {
     }
 
     const date = formatDate(post.date);
-    // const date = post.date;
     const twitterShare = `http://twitter.com/share?text=${encodeURIComponent(post.title)}&url=${
       config.siteUrl
     }/${post.slug}/&via=sydrawat`;
@@ -58,7 +58,7 @@ export default class PostTemplate extends Component {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Share
+                  <img src={twitter} alt="tweet!" width='20' height='20' />
                 </a>
               </div>
               <PostTags tags={post.tags} />
@@ -92,6 +92,7 @@ export const pageQuery = graphql`
         date
         tags
         category
+        slug
       }
       fields {
         slug
