@@ -736,6 +736,48 @@ h2.publication-company {
   }
 }
 
+.critique{
+  border: 1px solid green;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+
+  .watch {
+    img {
+      width: 35px;
+    }
+  }
+
+  .stars {
+    img {
+      width: 20px;
+    }
+  }
+}
+@include small-breakpoint {
+  .critique {
+    align-items: center;
+    justify-content: space-between;
+
+    .watch {
+      img {
+        width: 50px;
+      }
+      &:hover {
+        transition: all 0.3s ease;
+        transform: scale(1.1);
+      }
+    }
+
+    .stars {
+      img {
+        width: 30px;
+        padding: .2rem;
+      }
+    }
+  }
+}
 blockquote {
   color: rgba(0, 0, 0, 0.8);
   border: 2px solid lighten($yellow, 20%);
@@ -747,6 +789,9 @@ blockquote {
   line-height: 1.6;
   font-size: 1rem;
 
+  footer {
+    font-style: italic;
+  }
   &.success {
     border: none;
     background: lighten($green, 48%);
@@ -873,10 +918,12 @@ blockquote {
 }
 
 .note {
+  // border: 1px solid green;
   margin: 1.5rem;
 
   .note-container {
-    background: radial-gradient(circle at 20% 20%, #ffd68a 25%, rgb(148, 118, 88) 100%);
+    // border: 1px solid red;
+    background: transparent;
     box-shadow: 0.5rem 1.25rem 1.75rem 0 rgba(100, 110, 140, 0.4);
     color: rgba(32, 32, 32, 0.9);
     border-radius: $border-radius;
@@ -885,13 +932,6 @@ blockquote {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-
-    a.donate-button {
-      background: darken($primary-color, 20%);
-      &:hover {
-        background: darken($primary-color, 30%);
-      }
-    }
   }
 
   h3 {

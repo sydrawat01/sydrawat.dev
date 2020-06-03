@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import sid from '../../../content/images/sid1994.jpg';
-import kofi from '../../../content/images/ko-fi-user.png';
-import patreon from '../../../content/images/patreon-user.jpg';
+import {Link} from 'gatsby';
 
 export default class UserInfo extends Component {
   render() {
@@ -10,39 +9,19 @@ export default class UserInfo extends Component {
         <div className="container note-container">
           <div className="flex-author">
             <div className="flex-avatar">
-              <img className="avatar" src={sid} alt="Siddharth Rascia" />
+              <img className="avatar" src={sid} alt="Sid" />
             </div>
             <div className ="few-words">
-              <h3>About the author</h3>
+              <h3>
+                <Link to="/">Sydrawat</Link>
+              </h3>
               <p>
-                Hey, I’m Sid, a front-end software engineer.
+                Hey, I’m <a href="https://twitter.com/sydrawat">Sid</a>, a front-end software engineer. Every now and then I like to write down my personal thoughts floating beyond the space-time continnum.
               </p>
-              <p>
-                If you liked this post, consider donating!
-              </p>
-              <p>
-                Thanks for reading, have a nice day!
-              </p>
-
-              <div className="flex">
-                <a
-                  href="https://ko-fi.com/sydrawat"
-                  className="donate-button"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src={kofi} className="coffee-icon" alt="Coffee icon" />
-                  Buy me a coffee
-                </a>
-                <a
-                  className="patreon-button"
-                  href="https://www.patreon.com/sydrawat"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src={patreon} height="50" width="50" alt="Patreon" /> Become a Patron
-                </a>
-              </div>
+              <blockquote className="quotation">
+                <p>Every one of us is, in the cosmic perspective, precious. If a human disagrees with you, let him live. In a hundred billion galaxies, you will not find another.</p>
+                <footer>[Cosmos, Part 13: Who Speaks for Earth?(1980)]</footer> <cite>- Carl Sagan</cite>
+              </blockquote>
             </div>
           </div>
         </div>
