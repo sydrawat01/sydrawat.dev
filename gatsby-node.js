@@ -107,7 +107,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     }
 
     if (edge.node.frontmatter.category) {
-      categorySet.add(edge.node.frontmatter.category);
+      edge.node.frontmatter.category.forEach((categ) => {
+        categorySet.add(categ);
+      })
     }
 
     const nextID = index + 1 < postsEdges.length ? index + 1 : 0;

@@ -1,5 +1,5 @@
-import React, {Component} from "react";
-import {Helmet} from "react-helmet";
+import React, { Component } from "react";
+import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../layout";
 import PostListing from "../components/PostListing/PostListing";
@@ -7,8 +7,8 @@ import config from "../../data/SiteConfig";
 
 export default class CategoryTemplate extends Component {
   render() {
-    const { category } = this.props.pageContext
-    const postEdges = this.props.data.allMdx.edges
+    const { category } = this.props.pageContext;
+    const postEdges = this.props.data.allMdx.edges;
 
     return (
       <Layout>
@@ -22,12 +22,9 @@ export default class CategoryTemplate extends Component {
   }
 }
 
-export const pageQuery = graphql`
-  query CategoryPage {
-    allMdx(
-      limit: 1000
-      sort: { fields: [fields___date], order: DESC }
-    ) {
+export const pageQuery = graphql `
+  query CategoryPage($category: String) {
+    allMdx (filter: {frontmatter: {category: {in: [$category]}}}, sort: { fields: [fields___date], order: DESC }, limit: 1000){
       totalCount
       edges {
         node {
@@ -35,12 +32,12 @@ export const pageQuery = graphql`
             slug
             date
           }
-          excerpt
-          timeToRead
           frontmatter {
             title
             tags
             category
+            date
+            template
             thumbnail {
               childImageSharp {
                 fixed(width: 150, height: 150) {
@@ -48,8 +45,6 @@ export const pageQuery = graphql`
                 }
               }
             }
-            date
-            template
           }
         }
       }

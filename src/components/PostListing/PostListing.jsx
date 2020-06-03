@@ -1,37 +1,40 @@
-import React from "react";
-import { Link } from "gatsby";
-import Img from 'gatsby-image';
-import {formatDate} from '../../utils/global'
+import React, { Component } from 'react'
+import { Link } from 'gatsby'
+import Img from 'gatsby-image'
 
-class PostListing extends React.Component {
+import { formatDate } from '../../utils/global'
+
+export default class PostListing extends Component {
   getPostList() {
-    const postList = [];
-    this.props.postEdges.forEach(postEdge => {
-      postList.push({
+    const { postEdges } = this.props
+    const postList = postEdges.map(postEdge => {
+      return {
         path: postEdge.node.fields.slug,
         tags: postEdge.node.frontmatter.tags,
         thumbnail: postEdge.node.frontmatter.thumbnail,
         title: postEdge.node.frontmatter.title,
         date: postEdge.node.fields.date,
         excerpt: postEdge.node.excerpt,
-        timeToRead: postEdge.node.timeToRead
-      });
-    });
-    return postList;
+        timeToRead: postEdge.node.timeToRead,
+        category: postEdge.node.frontmatter.category,
+      }
+    })
+    return postList
   }
+
   render() {
-    const { simple } = this.props;
-    const postList = this.getPostList();
+    const { simple } = this.props
+    const postList = this.getPostList()
 
     return (
-      <section className={`posts`}>
+      <section className={`posts ${simple ? 'simple' : ''}`}>
         {postList.map(post => {
-          let thumbnail;
+          let thumbnail
           if (post.thumbnail) {
-            thumbnail = post.thumbnail.childImageSharp.fixed;
+            thumbnail = post.thumbnail.childImageSharp.fixed
           }
 
-          const date = formatDate(post.date);
+          const date = formatDate(post.date)
 
           return (
             <Link to={post.path} key={post.title}>
@@ -43,11 +46,9 @@ class PostListing extends React.Component {
                 </div>
               </div>
             </Link>
-          );
+          )
         })}
       </section>
-    );
+    )
   }
 }
-
-export default PostListing;

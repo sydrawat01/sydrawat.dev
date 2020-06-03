@@ -36,7 +36,7 @@ export default class BlogPage extends Component {
   render() {
     const { filteredPosts, searchTerm } = this.state;
     const filterCount = filteredPosts.length;
-    const categories = this.props.data.categories.group;
+    const categories = this.props.data.category.group;
 
     return (
       <Layout>
@@ -77,7 +77,7 @@ export default class BlogPage extends Component {
 
 export const pageQuery = graphql`
   query BlogQuery {
-    posts: allMdx(limit: 2000, sort: { fields: [fields___date], order: DESC }) {
+    posts: allMdx(limit: 2000, sort: { fields: [fields___date], order: DESC }, filter: { frontmatter: { template: { eq: "post" } } }) {
       edges {
         node {
           fields {
@@ -102,7 +102,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    categories: allMdx(limit: 2000) {
+    category: allMdx(limit: 2000) {
       group(field: frontmatter___category) {
         fieldValue
         totalCount

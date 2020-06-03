@@ -7,8 +7,8 @@ import config from '../../data/SiteConfig'
 
 export default class TagTemplate extends Component {
   render() {
-    const { tag } = this.props.pageContext
-    const postEdges = this.props.data.allMdx.edges
+    const { tag } = this.props.pageContext;
+    const postEdges = this.props.data.allMdx.edges;
 
     return (
       <Layout>
