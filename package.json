@@ -1,7 +1,7 @@
 {
   "name": "sydrawat",
   "description": "Sid's website built with GatsbyJS",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "author": "Siddharth Rawat <siddharth.rawat94@gmail.com>",
   "dependencies": {
     "@mdx-js/mdx": "^1.6.5",
