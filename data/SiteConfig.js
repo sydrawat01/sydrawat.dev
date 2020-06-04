@@ -11,11 +11,8 @@ const config = {
   dateFromFormat: 'YYYY-MM-DD', // Date format used in the frontmatter.
   dateFormat: 'MMMM DD, YYYY', // Date format for display.
   userName: 'sydrawat', // Username to display in the author segment.
-  userEmail: 'siddharth.rawat94@gmail.com', // Email used for RSS feed's author segment
+  userEmail: 'sydrawat@gmail.com', // Email used for RSS feed's author segment
   userTwitter: 'sydrawat', // Optionally renders "Follow Me" in the UserInfo segment.
-  userLocation: 'Bangalore, KA, India', // User location to display in the author segment.
-  userAvatar: 'https://api.adorable.io/avatars/150/test.png', // User avatar to display in the author segment.
-  userDescription: '', // User description to display in the author segment.
   menuLinks: [
     {
       name: 'About',
