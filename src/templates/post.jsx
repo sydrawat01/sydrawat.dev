@@ -32,9 +32,7 @@ export default class PostTemplate extends Component {
     }
 
     const date = formatDate(post.date);
-    const twitterShare = `http://twitter.com/share?text=${encodeURIComponent(post.title)}&url=${
-      config.siteUrl
-    }/${post.slug}/&via=sydrawat`;
+    const twitterShare = `http://twitter.com/share?text=${encodeURIComponent(post.title)}&url=${config.siteUrl}/${post.slug}/&via=sydrawat`;
 
     return (
       <Layout>
