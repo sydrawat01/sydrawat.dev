@@ -22,6 +22,8 @@ The `async` and `await` are the most dreaded thing one can find while learning J
 - If the function throws an exception, the promise will be rejected.
 - Use _then()_ and _catch()_ in a similar way on the function call as we do in Fetch and Axios.
 
+<div class="gatsby-code-title">Example.js</div>
+
 ```js
 async function hello (){
     return 'What up doe!';
@@ -46,6 +48,8 @@ We put the _await_ keyword inside the async function and it will pause the execu
 - We would see `Promise {<pending>}` first, and then when this promise is resolved, we get the desired result on the operation we have performed.
 - Once the promise is resolved, the value with which it is resolved is available in the variable we store it in.
 
+<div class="gatsby-code-title">Example.js</div>
+
 ```js
 async function getPlanets() {
   const res = await axios.get('https://swapi.co/api/planets');
@@ -65,6 +69,8 @@ There are 2 ways to handle errors in async functions:
 
 ### 1. Using `catch()` with the callback function
 
+<div class="gatsby-code-title">Example.js</div>
+
 ```js
 getPlanets().catch(err => {
   console.log('inside catch');
@@ -73,6 +79,8 @@ getPlanets().catch(err => {
 ```
 
 ### 2. Using `try` and `catch` in the async function
+
+<div class="gatsby-code-title">Example.js</div>
 
 ```js
 async function getPlanets() {
@@ -88,6 +96,8 @@ async function getPlanets() {
 ## Multiple awaits
 
 We can chain multiple requests one after another using the `await` keyword on a function that returns a promise.
+
+<div class="gatsby-code-title">Example.js</div>
 
 ```js
 async function animateRight(el, amt) {
@@ -114,6 +124,8 @@ animateRight(btn, 100).catch(err => {
 
 In sequential requests, we will wait till the first request is resolved, and only then move to the next request. So here, if any of the request fails, the remaining requests are dependent on the other requests, and will **not be executed**.
 
+<div class="gatsby-code-title">Example.js</div>
+
 ```js
 async function getPokemon() {
   const poke1 = await axios.get('https://pokeapi.co/api/v2/pokemon/1');
@@ -135,6 +147,8 @@ All the requests are being sent at the same instance of time, so they are simult
 
 The requests do not wait for one another to be resolved and only then send the request. The requests are sent independent of the resolution of the promise from the request, irrespective of the other requests failing.
 
+<div class="gatsby-code-title">Example.js</div>
+
 ```js
 async function getPokemon() {
   const prom1 = axios.get('https://pokeapi.co/api/v2/pokemon/1');
@@ -154,6 +168,8 @@ getPokemon();
 This method is better if we are not dependent on the other requsts being resolved.
 
 The below examples will make it more clearer:
+
+<div class="gatsby-code-title">Example.js</div>
 
 ```js
 //Example
@@ -197,6 +213,8 @@ lightShow2();
 
 This is a helper method for when we are sending the requests in parallel, we need to assign a lot of variables to the promise, the await, etc. as in the below example:
 
+<div class="gatsby-code-title">Example.js</div>
+
 ```js
 async function getPokemon() {
   const prom1 = axios.get('https://pokeapi.co/api/v2/pokemon/1');
@@ -216,6 +234,8 @@ getPokemon();
 So, `Promise.all()` accepts an array of promises. We can then use `await` on this for parallel resolution.
 
 Upon being resolved, we get the value objects in an array, which we can access easily.
+
+<div class="gatsby-code-title">Example.js</div>
 
 ```js
 async function getPokemon() {

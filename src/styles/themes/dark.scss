@@ -8,6 +8,10 @@ $dark-primary: $tag;
   background: $background;
   color: $foreground;
 
+  .gatsby-code-title {
+    background-color: darken(#3a3a3a, 5%);
+  }
+
   a {
     color: $dark-primary;
 
