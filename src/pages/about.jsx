@@ -4,6 +4,11 @@ import ThemeContext from '../context/ThemeContext';
 import Layout from '../layout';
 import SEO from '../components/SEO/SEO';
 import config from '../../data/SiteConfig';
+import apple from '../../content/thumbnails/apple.svg';
+import vscode from '../../content/thumbnails/vscode.svg';
+import mx2x from '../../content/thumbnails/mouse.svg';
+import screen from '../../content/thumbnails/screen.svg';
+import keyboard from '../../content/thumbnails/keyboard.svg'
 
 export default class Me extends Component {
   static contextType = ThemeContext; //eslint-disable-line
@@ -28,24 +33,24 @@ export default class Me extends Component {
               <p>
                 I also like doodling in my free time. I guess I'll post some here as well!
               </p>
-              <h3>Currently Using</h3>
-              <ul>
-                <li>
-                  Computer: 13" MacBook Pro
-                </li>
-                <li>
-                  Host:
-                  <a href="https://app.netlify.com"> Netlify</a>
-                </li>
-                <li>
-                  Editor:
-                  <a href="https://code.visualstudio.com"> VSCode</a>
-                </li>
-                <li>
-                  Static Site Generator:
-                  <a href="https://gatsbyjs.org"> Gatsby</a>
-                </li>
-              </ul>
+              <h3>Tech Setup</h3>
+              <div className="setup-container">
+                <a href="https://support.apple.com/kb/SP754?locale=en_US">
+                  <img src={apple} alt="Apple"/>
+                </a>
+                <a href="https://www.logitech.com/en-ph/product/mx-master-2s-flow">
+                  <img src={mx2x} alt="Logitech MX Master 2S"/>
+                </a>
+                <a href="https://code.visualstudio.com">
+                  <img src={vscode} alt="VSCode"/>
+                </a>
+                <a href="https://www.samsung.com/in/monitors/curved-cf390/LC27F390FHWXXL/">
+                  <img src={screen} alt='Samsung 27" Curved Monitor'/>
+                </a>
+                <a href="https://www.lofree.co/products/dot-mechanical-keyboard">
+                  <img src={keyboard} alt='Lofree DOT'/>
+                </a>
+              </div>
             </div>
             <div>
               <h4 style={{fontWeight: "lighter", fontSize: 1.3+'rem'}}>Special thanks to <a href="https://taniarascia.com">Tania Rascia</a> for the heavy inspiration for this site!</h4>
