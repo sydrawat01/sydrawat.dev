@@ -110,14 +110,17 @@
   }
 
   .filename {
-    background: #111;
+    background-color: darken(#282c34, 5%);
+    color: #d5d8df;
     padding: 0.5rem 1rem 0.75rem;
     font-size: 1rem;
-    color: white;
-    font-weight: bold;
+    font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
+    'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
+    'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier,
+    monospace;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
-    margin-bottom: -2.3rem;
+    margin-bottom: -2.4rem;
   }
 
   @include small-breakpoint {

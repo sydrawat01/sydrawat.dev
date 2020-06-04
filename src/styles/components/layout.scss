@@ -921,8 +921,7 @@ blockquote {
   margin: 1.5rem;
 
   .note-container {
-    // border: 1px solid red;
-    background: transparent;
+    background: darken($reading, 2%);
     box-shadow: 0.5rem 1.25rem 1.75rem 0 rgba(100, 110, 140, 0.4);
     color: rgba(32, 32, 32, 0.9);
     border-radius: $border-radius;

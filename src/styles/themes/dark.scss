@@ -1,16 +1,12 @@
-$background: #202020;
+$background: #1d2129;
 $foreground: #b3b9c5;
-$accent: #303030;
+$accent: #282c34;
 $dark-border: darken($background, 3%);
 $dark-primary: $tag;
 
 .dark {
   background: $background;
   color: $foreground;
-
-  .gatsby-code-title {
-    background-color: darken(#3a3a3a, 5%);
-  }
 
   a {
     color: $dark-primary;
@@ -290,7 +286,7 @@ $dark-primary: $tag;
   }
 
   pre code {
-    background: #3a3a3a;
+    background: #282c34;
   }
 
   .gradient-section {

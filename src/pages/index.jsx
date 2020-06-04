@@ -9,9 +9,9 @@ import sid from '../../content/images/sid1994.jpg';
 import reactjs from '../../content/thumbnails/reactjs.svg';
 import graphql from '../../content/thumbnails/graphql.png';
 import javascript from '../../content/thumbnails/js.png';
-import npm from '../../content/thumbnails/npm.png'
-import sass from '../../content/thumbnails/sass.png'
-import python from '../../content/thumbnails/python.png'
+import yarn from '../../content/thumbnails/yarn-kitten-circle.png'
+import sass from '../../content/thumbnails/sass.png';
+import python from '../../content/thumbnails/python.png';
 
 const IndexPage = () => (
   <Layout>
@@ -33,7 +33,7 @@ const IndexPage = () => (
             <img src={reactjs} alt="react" title="ReactJS"/>
             <img src={graphql} alt="gql" title="GraphQL"/>
             <img src={javascript} alt="js"  title="Javascript"/>
-            <img src={npm} alt="npm"  title="Node Package Manager"/>
+            <img src={yarn} alt="yarn"  title="Yarn Package Manager"/>
             <img src={sass} alt="sass"  title="SASS"/>
             <img src={python} alt="py"  title="Python"/>
           </div>
