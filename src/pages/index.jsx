@@ -30,12 +30,24 @@ const IndexPage = () => (
             A few skills that I'm still updating everyday
           </p>
           <div className="skills">
-            <img src={reactjs} alt="react" title="ReactJS"/>
-            <img src={graphql} alt="gql" title="GraphQL"/>
-            <img src={javascript} alt="js"  title="Javascript"/>
-            <img src={yarn} alt="yarn"  title="Yarn Package Manager"/>
-            <img src={sass} alt="sass"  title="SASS"/>
-            <img src={python} alt="py"  title="Python"/>
+            <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
+              <img src={reactjs} alt="react" title="ReactJS"/>
+            </a>
+            <a href="https://graphql.org" target="_blank" rel="noopener noreferrer">
+              <img src={graphql} alt="gql" title="GraphQL"/>
+            </a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer">
+              <img src={javascript} alt="js"  title="Javascript"/>
+            </a>
+            <a href="https://yarnpkg.com" target="_blank" rel="noopener noreferrer">
+              <img src={yarn} alt="yarn"  title="Yarn Package Manager"/>
+            </a>
+            <a href="https://sass-lang.com" target="_blank" rel="noopener noreferrer">
+              <img src={sass} alt="sass"  title="SASS"/>
+            </a>
+            <a href="https://python.org" target="_blank" rel="noopener noreferrer">
+              <img src={python} alt="py"  title="Python"/>
+            </a>
           </div>
         </div>
         <div className="flashcard-section">

@@ -35,19 +35,19 @@ export default class Me extends Component {
               </p>
               <h3>Tech Setup</h3>
               <div className="setup-container">
-                <a href="https://support.apple.com/kb/SP754?locale=en_US">
+                <a href="https://support.apple.com/kb/SP754?locale=en_US" target="_blank" rel="noopener noreferrer">
                   <img src={apple} alt="Apple"/>
                 </a>
-                <a href="https://www.logitech.com/en-ph/product/mx-master-2s-flow">
+                <a href="https://www.logitech.com/en-ph/product/mx-master-2s-flow" target="_blank" rel="noopener noreferrer">
                   <img src={mx2x} alt="Logitech MX Master 2S"/>
                 </a>
                 <a href="https://code.visualstudio.com">
                   <img src={vscode} alt="VSCode"/>
                 </a>
-                <a href="https://www.samsung.com/in/monitors/curved-cf390/LC27F390FHWXXL/">
+                <a href="https://www.samsung.com/in/monitors/curved-cf390/LC27F390FHWXXL/" target="_blank" rel="noopener noreferrer">
                   <img src={screen} alt='Samsung 27" Curved Monitor'/>
                 </a>
-                <a href="https://www.lofree.co/products/dot-mechanical-keyboard">
+                <a href="https://www.lofree.co/products/dot-mechanical-keyboard" target="_blank" rel="noopener noreferrer">
                   <img src={keyboard} alt='Lofree DOT'/>
                 </a>
               </div>

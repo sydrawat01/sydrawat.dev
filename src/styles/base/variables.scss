@@ -6,12 +6,13 @@
 /* Containers */
 
 $x-small: 720px;
-$small: 800px;
+$small: 768px;
 $medium: 1200px;
 $large: 1300px;
 
 /* Breakpoints */
 
+$xsmall: 375px;
 $mobile: 620px;
 $tablet: $small;
 $desktop: $medium;

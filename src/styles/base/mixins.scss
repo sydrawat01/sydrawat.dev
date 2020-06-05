@@ -2,6 +2,18 @@
   =============== */
 
 // Media query for mobile first layout
+@mixin xsmall-breakpoint {
+  @media (max-width: #{$xsmall}) {
+    @content;
+  }
+}
+
+@mixin xmedium-breakpoint {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
 @mixin small-breakpoint {
   @media (min-width: #{$mobile}) {
     @content;
