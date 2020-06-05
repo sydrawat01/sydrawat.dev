@@ -1078,12 +1078,12 @@ blockquote {
     align-items: center;
     font-size: 0.85rem;
     padding: 0.5rem 0.75rem;
-    background: lighten($primary-color, 32%);
+    background: $light;
     border-radius: $border-radius;
     margin-right: 0.5rem;
     margin-bottom: 0.5rem;
     font-weight: 500;
-    color: $primary-color;
+    color: $font-color;
     cursor: pointer;
 
     .count {
@@ -1092,7 +1092,7 @@ blockquote {
       justify-content: center;
       font-size: 0.8rem;
       margin-left: 1rem;
-      color: $primary-color;
+      color: $font-color;
       height: 23px;
       width: 23px;
       border-radius: 50%;
@@ -1100,8 +1100,8 @@ blockquote {
     }
 
     &.active {
-      background: $primary-color;
-      color: white;
+      background: darken($light, 5%);
+      color: $font-color;
 
       .count {
         background: white;
@@ -1110,8 +1110,8 @@ blockquote {
       &:hover,
       &:active,
       &:focus {
-        color: white;
-        background: darken($primary-color, 10%);
+        color: $font-color;
+        background: darken($light, 10%);
       }
     }
 
@@ -1120,8 +1120,8 @@ blockquote {
     }
 
     &:hover {
-      background: lighten($primary-color, 28%);
-      color: darken($primary-color, 5%);
+      background: darken($light, 5%);
+      color: darken($font-color, 5%);
     }
   }
 }
