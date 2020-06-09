@@ -42,6 +42,8 @@ This is my personal `profile cum blog` where I write down my thought and notes a
 
     _Note: You'll also see a second link:_`http://localhost:8000/___graphql`_. This is the GraphiQL tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
+  > NOTE : For deployment, follow the [Gatsby AWS S3 guide](https://www.gatsbyjs.org/docs/deploying-to-s3-cloudfront/) for more detailed steps on how to deploy the site on AWS. If you're looking for different resources to deploy/host your site, have a look [here](https://www.gatsbyjs.org/docs/deploying-and-hosting/).
+
 ## :busts_in_silhouette:  Acknowledgements
 
 - Ruben Harutyunyan - [Gatsby Advanced Starter](https://github.com/Vagr9K/gatsby-advanced-starter/tree/master/content)
@@ -57,7 +59,7 @@ This is my personal `profile cum blog` where I write down my thought and notes a
 
 This project is open source and available under the [MIT License](./LICENSE).
 
-## :nut_and_bolt:  Creating Issues :wrench:
+## :nut_and_bolt:  Creating Issues :wrench
 
 Before you create an issue, please go through the [Code of Conduct](https://github.com/sydrawat/sydrawat-issues/blob/master/CODE_OF_CONDUCT.md) and follow the structure of [template](https://github.com/sydrawat/sydrawat-issues/tree/master/.github/ISSUE_TEMPLATE) provided for raising an issue.
 
