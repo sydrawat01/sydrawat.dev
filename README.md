@@ -26,7 +26,7 @@ This is my personal `profile cum blog` where I write down my thought and notes a
     Navigate into the site’s directory and install the dependencies.
 
     ```shell
-    yarn
+    yarn install
     ```
 
 3. **Start developing.**
