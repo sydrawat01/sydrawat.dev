@@ -1,7 +1,7 @@
 {
   "name": "sydrawat",
-  "description": "Sid's website built with GatsbyJS",
-  "version": "1.2.4",
+  "description": "Sid's website built with Gatsby, React & GraphQL",
+  "version": "1.2.5",
   "author": "Siddharth Rawat <siddharth.rawat94@gmail.com>",
   "dependencies": {
     "@mdx-js/mdx": "^1.6.5",
@@ -67,7 +67,11 @@
     "stylelint-config-standard": "^19.0.0"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "sydrawat",
+    "profile",
+    "blog",
+    "portfolio"
   ],
   "license": "MIT",
   "main": "n/a",
