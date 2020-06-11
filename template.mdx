@@ -1,0 +1,50 @@
+---
+title: 'Title of Post'
+date: YYYY-MM-DD
+timestamp: 'Jun 2020'
+template: post
+slug: page-slug
+thumbnail: './path/to/thumbnail.png'
+category:
+  - category 1
+  - category 2
+  - category 3
+tags:
+  - tag 1
+  - tag 2
+  - tag 3
+---
+
+# NOTE: This "post" is based on [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) and is meant to test styling of Markdown generated documents.
+
+## Yes! Some code!
+
+Here is the `Dump` component!
+
+```jsx
+import React from 'react';
+
+const Dump = props => (
+  <div
+    style={{
+      fontSize: 20,
+
+      border: '1px solid #efefef',
+
+      padding: 10,
+
+      background: 'white',
+    }}
+  >
+    {Object.entries(props).map(([key, val]) => (
+      <pre key={key}>
+        <strong style={{ color: 'white', background: 'red' }}>{key} 💩</strong>
+
+        {JSON.stringify(val, '', ' ')}
+      </pre>
+    ))}
+  </div>
+);
+
+export default Dump;
+```
