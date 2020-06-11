@@ -1,14 +1,15 @@
 ---
-title: "Async & Await : JS Magic"
+title: 'Async & Await : JS Magic'
 date: 2020-06-02
+timestamp: 'June 2020'
 template: post
 slug: async-await
-thumbnail: "../thumbnails/js.png"
+thumbnail: '../thumbnails/js.png'
+category:
+  - Javascript
 tags:
   - Async
   - Await
-category:
-  - Javascript
 ---
 
 The `async` and `await` are the most dreaded thing one can find while learning Javascript. I like to take things in an easier fashion, for better understanding!
@@ -22,7 +23,7 @@ The `async` and `await` are the most dreaded thing one can find while learning J
 - If the function throws an exception, the promise will be rejected.
 - Use _then()_ and _catch()_ in a similar way on the function call as we do in Fetch and Axios.
 
-<div class="filename">Example.js</div>
+<div className="filename">Example.js</div>
 
 ```js
 async function hello (){
@@ -48,7 +49,7 @@ We put the _await_ keyword inside the async function and it will pause the execu
 - We would see `Promise {<pending>}` first, and then when this promise is resolved, we get the desired result on the operation we have performed.
 - Once the promise is resolved, the value with which it is resolved is available in the variable we store it in.
 
-<div class="filename">Example.js</div>
+<div className="filename">Example.js</div>
 
 ```js
 async function getPlanets() {
@@ -69,7 +70,7 @@ There are 2 ways to handle errors in async functions:
 
 ### 1. Using `catch()` with the callback function
 
-<div class="filename">Example.js</div>
+<div className="filename">Example.js</div>
 
 ```js
 getPlanets().catch(err => {
@@ -80,7 +81,7 @@ getPlanets().catch(err => {
 
 ### 2. Using `try` and `catch` in the async function
 
-<div class="filename">Example.js</div>
+<div className="filename">Example.js</div>
 
 ```js
 async function getPlanets() {
@@ -97,7 +98,7 @@ async function getPlanets() {
 
 We can chain multiple requests one after another using the `await` keyword on a function that returns a promise.
 
-<div class="filename">Example.js</div>
+<div className="filename">Example.js</div>
 
 ```js
 async function animateRight(el, amt) {
@@ -124,7 +125,7 @@ animateRight(btn, 100).catch(err => {
 
 In sequential requests, we will wait till the first request is resolved, and only then move to the next request. So here, if any of the request fails, the remaining requests are dependent on the other requests, and will **not be executed**.
 
-<div class="filename">Example.js</div>
+<div className="filename">Example.js</div>
 
 ```js
 async function getPokemon() {
@@ -147,7 +148,7 @@ All the requests are being sent at the same instance of time, so they are simult
 
 The requests do not wait for one another to be resolved and only then send the request. The requests are sent independent of the resolution of the promise from the request, irrespective of the other requests failing.
 
-<div class="filename">Example.js</div>
+<div className="filename">Example.js</div>
 
 ```js
 async function getPokemon() {
@@ -169,7 +170,7 @@ This method is better if we are not dependent on the other requsts being resolve
 
 The below examples will make it more clearer:
 
-<div class="filename">Example.js</div>
+<div className="filename">Example.js</div>
 
 ```js
 //Example
@@ -213,7 +214,7 @@ lightShow2();
 
 This is a helper method for when we are sending the requests in parallel, we need to assign a lot of variables to the promise, the await, etc. as in the below example:
 
-<div class="filename">Example.js</div>
+<div className="filename">Example.js</div>
 
 ```js
 async function getPokemon() {
@@ -235,7 +236,7 @@ So, `Promise.all()` accepts an array of promises. We can then use `await` on thi
 
 Upon being resolved, we get the value objects in an array, which we can access easily.
 
-<div class="filename">Example.js</div>
+<div className="filename">Example.js</div>
 
 ```js
 async function getPokemon() {
