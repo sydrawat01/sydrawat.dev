@@ -8,12 +8,12 @@ import SEO from '../components/SEO/SEO';
 import config from '../../data/SiteConfig';
 
 export default class BlogPage extends Component {
-  constructor(props) {
-    super(props);
+  constructor({ data }) {
+    super({ data });
     this.state = {
       searchTerm: '',
-      posts: this.props.data.posts.edges,
-      filteredPosts: this.props.data.posts.edges,
+      posts: data.posts.edges,
+      filteredPosts: data.posts.edges,
     };
   }
 
@@ -34,9 +34,10 @@ export default class BlogPage extends Component {
   };
 
   render() {
+    const { data } = this.props;
     const { filteredPosts, searchTerm } = this.state;
     const filterCount = filteredPosts.length;
-    const categories = this.props.data.category.group;
+    const categories = data.category.group;
 
     return (
       <Layout>
@@ -77,7 +78,11 @@ export default class BlogPage extends Component {
 
 export const pageQuery = graphql`
   query BlogQuery {
-    posts: allMdx(limit: 2000, sort: { fields: [fields___date], order: DESC }, filter: { frontmatter: { template: { eq: "post" } } }) {
+    posts: allMdx(
+      limit: 2000
+      sort: { fields: [fields___date], order: DESC }
+      filter: { frontmatter: { template: { eq: "post" } } }
+    ) {
       edges {
         node {
           fields {

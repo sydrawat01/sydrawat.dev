@@ -11,9 +11,17 @@ const Footer = () => {
   return (
     <footer className="footer container">
       <div>
-        <a href="#">&copy; 2020 Sydrawat</a>
-        <a href="https://taniarascia.com" target="_blank" rel="noopener noreferrer">Design</a>
-        <a href="https://github.com/sydrawat/sydrawat-issues/issues/new/choose" target="_blank" rel="noopener noreferrer">Issues</a>
+        <a href="/">&copy; 2020 Sydrawat</a>
+        <a href="https://taniarascia.com" target="_blank" rel="noopener noreferrer">
+          Design
+        </a>
+        <a
+          href="https://github.com/sydrawat/sydrawat-issues/issues/new/choose"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Issues
+        </a>
         <Link to="/contact/">Contact</Link>
       </div>
       <div>

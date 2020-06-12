@@ -6,10 +6,9 @@ template: post
 slug: async-await
 thumbnail: '../thumbnails/js.png'
 category:
-  - Javascript
+  - Tech
 tags:
-  - Async
-  - Await
+  - Javascript
 ---
 
 The `async` and `await` are the most dreaded thing one can find while learning Javascript. I like to take things in an easier fashion, for better understanding!
@@ -62,7 +61,14 @@ getPlanets();
 
 _Ex_ : When we log the parsed JSON object `res.data`, we get:
 
-`{count: 61, next: "https://swapi.co/api/planets/?page=2", previous: null, results: Array(10)}`
+```json
+{
+  "count": 61,
+  "next": "https://swapi.co/api/planets/?page=2",
+  "previous": null,
+  "results": Array(10)
+}
+```
 
 ## Error handling in async functions
 

@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
-import { Link } from 'gatsby'
-import Img from 'gatsby-image'
+import React, { Component } from 'react';
+import { Link } from 'gatsby';
+import Img from 'gatsby-image';
 
-import { formatDate } from '../../utils/global'
+import { formatDate } from '../../utils/global';
 
 export default class PostListing extends Component {
   getPostList() {
-    const { postEdges } = this.props
+    const { postEdges } = this.props;
     const postList = postEdges.map(postEdge => {
       return {
         path: postEdge.node.fields.slug,
@@ -17,24 +17,24 @@ export default class PostListing extends Component {
         excerpt: postEdge.node.excerpt,
         timeToRead: postEdge.node.timeToRead,
         category: postEdge.node.frontmatter.category,
-      }
-    })
-    return postList
+      };
+    });
+    return postList;
   }
 
   render() {
-    const { simple } = this.props
-    const postList = this.getPostList()
+    const { simple } = this.props;
+    const postList = this.getPostList();
 
     return (
       <section className={`posts ${simple ? 'simple' : ''}`}>
         {postList.map(post => {
-          let thumbnail
+          let thumbnail;
           if (post.thumbnail) {
-            thumbnail = post.thumbnail.childImageSharp.fixed
+            thumbnail = post.thumbnail.childImageSharp.fixed;
           }
 
-          const date = formatDate(post.date)
+          const date = formatDate(post.date);
 
           return (
             <Link to={post.path} key={post.title}>
@@ -46,9 +46,9 @@ export default class PostListing extends Component {
                 </div>
               </div>
             </Link>
-          )
+          );
         })}
       </section>
-    )
+    );
   }
 }

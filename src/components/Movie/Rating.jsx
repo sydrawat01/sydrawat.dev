@@ -10,7 +10,7 @@ const Rating = ({ stars, link, thumbnail }) => {
     <div className="critique">
       <div className="watch">
         <a href={link}>
-          <img src={thumbnail} alt="netflix"/>
+          <img src={thumbnail} alt="netflix" />
         </a>
       </div>
       <div className="stars">

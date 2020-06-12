@@ -1,14 +1,15 @@
-import React, { Component } from 'react'
-import { Helmet } from 'react-helmet'
-import { Link, graphql } from 'gatsby'
-import kebabCase from 'lodash.kebabcase'
-import Layout from '../layout'
-import SEO from '../components/SEO/SEO'
-import config from '../../data/SiteConfig'
+import React, { Component } from 'react';
+import { Helmet } from 'react-helmet';
+import { Link, graphql } from 'gatsby';
+import kebabCase from 'lodash.kebabcase';
+import Layout from '../layout';
+import SEO from '../components/SEO/SEO';
+import config from '../../data/SiteConfig';
 
 export default class CategoriesPage extends Component {
   render() {
-    const { group } = this.props.data.allMdx;
+    const { data } = this.props;
+    const { group } = data.allMdx;
 
     return (
       <Layout>
@@ -27,7 +28,7 @@ export default class CategoriesPage extends Component {
           </div>
         </div>
       </Layout>
-    )
+    );
   }
 }
 
@@ -40,4 +41,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

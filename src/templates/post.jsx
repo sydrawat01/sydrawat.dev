@@ -5,7 +5,7 @@ import Img from 'gatsby-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import Layout from '../layout';
 import UserInfo from '../components/UserInfo/UserInfo';
-import {formatDate} from '../utils/global'
+import { formatDate } from '../utils/global';
 import PostTags from '../components/PostTags/PostTags';
 import SEO from '../components/SEO/SEO';
 import config from '../../data/SiteConfig';
@@ -14,8 +14,9 @@ import twitter from '../../content/images/twitter.svg';
 
 export default class PostTemplate extends Component {
   render() {
-    const { slug } = this.props.pageContext;
-    const postNode = this.props.data.mdx;
+    const { pageContext, data } = this.props;
+    const { slug } = pageContext;
+    const postNode = data.mdx;
     const post = postNode.frontmatter;
     let thumbnail;
 
@@ -32,7 +33,9 @@ export default class PostTemplate extends Component {
     }
 
     const date = formatDate(post.date);
-    const twitterShare = `http://twitter.com/share?text=${encodeURIComponent(post.title)}&url=${config.siteUrl}/${post.slug}/&via=sydrawat`;
+    const twitterShare = `http://twitter.com/share?text=${encodeURIComponent(post.title)}&url=${
+      config.siteUrl
+    }/${post.slug}/&via=sydrawat`;
 
     return (
       <Layout>
@@ -56,7 +59,7 @@ export default class PostTemplate extends Component {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img src={twitter} alt="tweet!" width='20' height='20' />
+                  <img src={twitter} alt="tweet!" width="20" height="20" />
                 </a>
               </div>
               <PostTags tags={post.tags} />

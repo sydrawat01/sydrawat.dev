@@ -13,53 +13,53 @@
 
 This is my personal `profile cum blog` where I write down my thought and notes about the interisting stuff I'm learning about the web everyday!
 
-## :rocket:  Quick start
+## :rocket: Quick start
 
 1. **Clone the repo**
 
-    ```shell
-    git clone https://github.com/sydrawat/sydrawat.git
-    ```
+   ```shell
+   git clone https://github.com/sydrawat/sydrawat.git
+   ```
 
 2. **Install dependencies**
 
-    Navigate into the site’s directory and install the dependencies.
+   Navigate into the site’s directory and install the dependencies.
 
-    ```shell
-    yarn install
-    ```
+   ```shell
+   yarn install
+   ```
 
 3. **Start developing.**
 
-    ```shell
-    cd sydrawat/
-    yarn develop
-    ```
+   ```shell
+   cd sydrawat/
+   yarn develop
+   ```
 
 4. **View your site!**
 
-    The site is now running at `http://localhost:8000`!
+   The site is now running at `http://localhost:8000`!
 
-    _Note: You'll also see a second link:_`http://localhost:8000/___graphql`_. This is the GraphiQL tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+   _Note: You'll also see a second link:_`http://localhost:8000/___graphql`_. This is the GraphiQL tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
-  > NOTE : For deployment, follow the [Gatsby AWS S3 guide](https://www.gatsbyjs.org/docs/deploying-to-s3-cloudfront/) for more detailed steps on how to deploy the site on AWS. If you're looking for different resources to deploy/host your site, have a look [here](https://www.gatsbyjs.org/docs/deploying-and-hosting/).
+> NOTE : For deployment, follow the [Gatsby AWS S3 guide](https://www.gatsbyjs.org/docs/deploying-to-s3-cloudfront/) for more detailed steps on how to deploy the site on AWS. If you're looking for different resources to deploy/host your site, have a look [here](https://www.gatsbyjs.org/docs/deploying-and-hosting/).
 
-## :busts_in_silhouette:  Acknowledgements
+## :busts_in_silhouette: Acknowledgements
 
 - Ruben Harutyunyan - [Gatsby Advanced Starter](https://github.com/Vagr9K/gatsby-advanced-starter/tree/master/content)
 - Tania Rascia - Heavy inspiration from [taniarascia.com](https://taniarascia.com) [[source]](https://github.com/taniarascia/taniarascia)
 - Muhammad Muhsin - [Using React Context API with Gatsby](https://www.gatsbyjs.org/blog/2019-01-31-using-react-context-api-with-gatsby/)
 - Thomas Wang - [How to convert an existing Gatsby blog to use MDX](https://www.gatsbyjs.org/blog/2019-11-21-how-to-convert-an-existing-gatsby-blog-to-use-mdx/)
 
-## :bust_in_silhouette:  Author
+## :bust_in_silhouette: Author
 
-- :feelsgood:  [Siddharth Rawat](https://sydrawat.netlify.app)
+- :feelsgood: [Siddharth Rawat](https://sydrawat.netlify.app)
 
-## :page_with_curl:  License
+## :page_with_curl: License
 
 This project is open source and available under the [MIT License](./LICENSE).
 
-## :nut_and_bolt:  Creating Issues :wrench:
+## :nut_and_bolt: Creating Issues :wrench:
 
 Before you create an issue, please go through the [Code of Conduct](https://github.com/sydrawat/sydrawat-issues/blob/master/CODE_OF_CONDUCT.md) and follow the structure of [template](https://github.com/sydrawat/sydrawat-issues/tree/master/.github/ISSUE_TEMPLATE) provided for raising an issue.
 

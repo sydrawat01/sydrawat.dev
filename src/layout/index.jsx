@@ -1,30 +1,30 @@
-import React from "react";
-import Helmet from "react-helmet";
-import config from "../../data/SiteConfig";
-import Navigation from "../components/Navigation/Navigation";
-import ThemeContext from "../context/ThemeContext";
-import Footer from "../components/Footer/Footer";
-import "../styles/main.scss";
+import React from 'react';
+import Helmet from 'react-helmet';
+import config from '../../data/SiteConfig';
+import Navigation from '../components/Navigation/Navigation';
+import ThemeContext from '../context/ThemeContext';
+import Footer from '../components/Footer/Footer';
+import '../styles/main.scss';
 
 export default class MainLayout extends React.Component {
-  static contextType = ThemeContext;
+  static contextType = ThemeContext; //eslint-disable-line
 
   render() {
     const { dark, notFound } = this.context;
     const { children } = this.props;
-    let themeClass = "";
+    let themeClass = '';
 
     if (dark && !notFound) {
-      themeClass = "dark";
+      themeClass = 'dark';
     } else if (notFound) {
-      themeClass = "not-found";
+      themeClass = 'not-found';
     }
 
     return (
       <div>
         <Helmet
           bodyAttributes={{
-            class: `theme ${themeClass}`
+            class: `theme ${themeClass}`,
           }}
         >
           <meta name="description" content={config.siteDescription} />

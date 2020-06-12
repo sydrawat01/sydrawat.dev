@@ -26,8 +26,8 @@ export default class SEO extends Component {
       image = config.siteLogo;
     }
 
-    image = urljoin(config.siteUrl, image)
-    const blogURL = urljoin(config.siteUrl, config.pathPrefix)
+    image = urljoin(config.siteUrl, image);
+    const blogURL = urljoin(config.siteUrl, config.pathPrefix);
     const schemaOrgJSONLD = [
       {
         '@context': 'http://schema.org',
@@ -36,7 +36,7 @@ export default class SEO extends Component {
         name: title,
         alternateName: config.siteTitleAlt ? config.siteTitleAlt : '',
       },
-    ]
+    ];
 
     if (postSEO) {
       schemaOrgJSONLD.push(
@@ -67,8 +67,8 @@ export default class SEO extends Component {
             url: image,
           },
           description,
-        }
-      )
+        },
+      );
     }
     return (
       <Helmet>
@@ -89,6 +89,6 @@ export default class SEO extends Component {
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={image} />
       </Helmet>
-    )
+    );
   }
 }
