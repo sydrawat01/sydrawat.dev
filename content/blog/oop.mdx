@@ -1,0 +1,221 @@
+---
+title: 'Object Oriented Concepts'
+date: 2020-06-14
+timestamp: 'Jun 2020'
+template: post
+slug: oops
+thumbnail: '../thumbnails/js.png'
+category:
+  - Tech
+tags:
+  - Javascript
+---
+
+# Prototypes, Classes & the `new` operator
+
+## [Object Prototypes](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
+
+Prototypes are the mechanism by which Javascript objects inherit features from one another.
+Objects can have **prototype object**, which acts as a template object. This is the \_**proto\_** object template that has all the default functions described on that object.
+
+In arrays, which are objects in Javascript, we can see the key value pairs w.r.t the index, but there is another key called \_**proto\_**, which contains all the default functions on the array like `push()`, `pop()`, `shift()`, etc.
+
+We can check this using `Array.prototype` and then expanding the same in the developer console.
+
+`[object].prototype.[function]` is the **actual prototype object** where we add the property/function to the prototype template object.
+
+The `__proto__` is the protperty on the object or primitive data type (like arrays, strings, etc.). It gives a **reference** to the prototype of that object or primitive data type. We can check that using `[object].__proto__`.
+
+## Intro to OOP
+
+### Factory Functions
+
+With the help of factory functions, we need not pass the same parameters for different operations with that data. We can use the factory function created in the object to accept the same set of paramerters for different operations.
+
+<div className="filename">App.js</div>
+
+```js
+function makeColor(r, g, b) {
+  const color = {};
+  color.r = r;
+  color.g = g;
+  color.b = b;
+  color.rgb = function () {
+    const { r, g, b } = this;
+    return `rgb(${r},${g},${b})`;
+  };
+  color.hex = function () {
+    const { r, g, b } = this;
+    return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+  };
+  return color;
+}
+
+const firstColor = makeColor(25, 150, 187);
+console.log(firstColor.rgb()); //rgb(25,150,187)
+console.log(firstColor.hex()); //#1996bb
+```
+
+We make a function with a bunch of functions to perform different operations, and then return the object. This object we can then use to call the "_factory_" functions defined in the object and perform the required operation.
+
+The problem with factory functions is that every time we create a new object to access the porperties of an object, there is a unique copy of the function we call, that is created, which is generally not needed.
+
+So when we call `firstColor.hex === secondColor.hex`, and since functions are reference types, it should return `true`, but we get `false` instead. This is because of the fact that each object will have it's own copy of the factory function.
+
+## Constructor Functions
+
+Factory functions or patterns are not commonly used. Instead we use constructor functions or patterns, which is more common.
+
+<div className="filename">App.js</div>
+
+```js
+function Color(r, g, b) {
+  this.r = r;
+  this.g = g;
+  this.b = b;
+  console.log(this);
+}
+```
+
+When we call the `Color()` function with the `new` keyword, we are actually doing the following:
+
+- Creates a black, plain Javascript object.
+- Links (sets the constructor of) this object to another object
+- Passes the newly created object from the first step as the _this_ context.
+- Returns _this_ if the function does not return it's own object.
+
+So when we call the `Color()` function without the `new` keyword, we see that logging `this` gives us the `Window` object, instead of the `r,g,b` color values object.
+
+Same function call with the `new` keyword gives us the color object with the `r,g,b` values.
+
+<div className="filename">App.js</div>
+
+```js
+Color(255, 10, 50); //Window {parent: Window, opener: null, top: Window, length: 0, frames: Window, …}
+
+new Color(255, 10, 50); //Color {r: 255, g: 10, b: 50}
+```
+
+Also, in the function call with the `new` keyword, the thing that is done implicitly is, in the developer tools, we can see under the `__proto__` property of the returned object, there is a `constructor` function as the `key` with the value set to the `Color()` function. This is what is meant by _'Links (sets the constructor of) this object to another object'_.
+
+This does not create a unique copy of the function, hence it's more efficient, since it goes into the `__proto__` property of the object, hence increasing usability.
+
+<div className="filename">App.js</div>
+
+```js
+//constructor function
+function Color(r, g, b) {
+  this.r = r;
+  this.g = g;
+  this.b = b;
+}
+
+//function becomes a prototype for other objects from the same constructor function
+Color.prototype.rgb = function () {
+  const { r, g, b } = this;
+  return `rgb(${r},${g},${b})`;
+};
+
+Color.prototype.hex = function () {
+  const { r, g, b } = this;
+  return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+};
+
+const color1 = new Color(15, 167, 87);
+const color2 = new Color(14, 15, 16);
+console.log(color1.rgb()); //rgb(15,167,87)
+
+console.log(color1);
+/*
+Color {r: 15, g: 167, b: 87}
+r: 15
+g: 167
+b: 87
+__proto__:
+    rgb: ƒ ()
+    constructor: ƒ Color(r, g, b)
+    __proto__: Object
+*/
+```
+
+Here, if we check `color1.hex === color2,.hex`, we get `true`, since the function `hex` is now a prototype, so it will not be a unique property on the `hex` function. The same `__proto__` will be shared for both `color1` and `color2` objects.
+
+## JS Classes
+
+This is syntactical sugar for constructor functions and their function prototypes.
+
+Main advantages of using classes over constructor functions is that we don't have to declare the constructor and the object prototype functions seperately.
+
+All the functions defined inside the `class` will be by default added to the `__proto__` property of the object when using the `new` keyword to create a new object of that `class`.
+
+<div className="filename">App.js</div>
+
+```js
+class Color {
+  constructor(r, g, b, name) {
+    this.r = r;
+    this.g = g;
+    this.b = b;
+    this.name = name;
+  }
+    innerRGB() {
+        const { r, g, b } = this;
+        return `${r},${g},${b}`;
+    }
+  rgb() {
+    return `rgb(${this.innerRGB()})`);
+  }
+  hex() {
+    const { r, g, b } = this;
+    return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+  }
+  rgba(a = 1.0) {
+    return `rgba(${this.innerRGB()},${a})`;
+  }
+}
+
+const c1 = new Color(231, 166, 91, 'mudbrown');
+console.log(c1.rgba(0.4)); //rgba(231,166,91,0.4)
+```
+
+## Inheritance - Extends, Super and Subclasses
+
+Inheritance is mainly used to share common code across different classes. Like in the example for class `Pet`, we share the function `eat()` and the `constructor` which is assigning the `name` and `age` property to our pet. The `Pet` class is being `extended` by the `subclasses` `Dog` and `Cat` using the keyword `extends` on the subclasses.
+
+In case there is method overloading, i.e., when there are two or more functions with the same name, there is a way JS resolves this issue.
+
+If the function is defined in the `derived class`, that is looked up and called first. If not found in the `derived class`, it is looked up in the `base class`, from which this class is using the `extends` keyword. Then that function is used. Even if the function is not found in the `base class`, then Javascript will throw an error.
+
+### `super` keyword
+
+The `super` keyword comes into play when we have to initialize more values in our `derived class` `constructor` than what are defined in the `base class` `constructor`.
+
+Have a look at the example below:
+
+<div className="filename">Inheritance.js</div>
+
+```js
+class Pet {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  eat() {
+    return `${this.name} is eating!`;
+  }
+}
+
+class Cat extends Pet {
+  constructor(name, age, livesLeft = 9) {
+    super(name, age);
+    this.livesLeft = livesLeft;
+  }
+  meow() {
+    return 'MEOW!!';
+  }
+}
+```
+
+Here, in our `base class` called `Pet`, we are using the `constructor` to initialize only `name` and `age` for the `derived class`.
+
+In our `derived class` called `Cat`, we need to define another variable in our referene object of class `Cat`. This is again done by creating a `constructor` inside the `Cat` class. But we need not define the `name` and `age` again for the `Cat`, we can simply call the `base class` constructor using the keyword `super` with the parameters as `name` and `age`, which in turn calls the `base class's` (`Pet`) constructor which assigns the `name` and `age` propoerties to out new `Cat` reference object.
