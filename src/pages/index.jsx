@@ -15,7 +15,7 @@ import python from '../../content/thumbnails/python.png';
 
 const IndexPage = () => (
   <Layout>
-    <Helmet title={`${config.siteTitle} – Software Engineer`} />
+    <Helmet title={`${config.siteTitle} – Front End Engineer`} />
     <SEO />
     <div className="container">
       <div className="lead">

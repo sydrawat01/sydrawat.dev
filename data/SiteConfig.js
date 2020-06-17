@@ -1,18 +1,19 @@
 const config = {
-  siteTitle: 'Siddharth Rawat', // Site title.
-  siteTitleShort: 'sydrawat', // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
-  siteTitleAlt: 'Siddharth Rawat', // Alternative site title for SEO.
-  siteLogo: '/src/images/stickie.svg', // Logo used for SEO and manifest.
-  siteUrl: 'https://sydrawat.netlify.app', // Domain of your website without pathPrefix.
-  pathPrefix: '/sydrawat', // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
-  siteDescription: "Sid's website and blog", // Website description used for RSS feeds/meta description tag.
-  siteRss: '/rss.xml', // Path to the RSS file.
-  postDefaultCategoryID: 'Tech', // Default category for posts.
-  dateFromFormat: 'YYYY-MM-DD', // Date format used in the frontmatter.
-  dateFormat: 'MMMM DD, YYYY', // Date format for display.
-  userName: 'sydrawat', // Username to display in the author segment.
-  userEmail: 'sydrawat@gmail.com', // Email used for RSS feed's author segment
-  userTwitter: 'sydrawat', // Optionally renders "Follow Me" in the UserInfo segment.
+  siteTitle: 'Siddharth Rawat',
+  siteTitleShort: 'sydrawat',
+  siteTitleAlt: 'Siddharth Rawat',
+  siteLogo: '/src/images/stickie.svg',
+  siteUrl: 'https://sydrawat.netlify.app',
+  repo: 'https://github.com/sydrawat/sydrawat',
+  pathPrefix: '',
+  siteDescription: 'Siddharth is a front-end software engineer  tinkering with React and GraphQL',
+  siteRss: '/rss.xml',
+  postDefaultCategoryID: 'Tech',
+  dateFromFormat: 'YYYY-MM-DD',
+  dateFormat: 'MMMM Do, YYYY',
+  userName: 'Siddharth',
+  userEmail: 'sydrawat@gmail.com',
+  userTwitter: 'sydrawat',
   menuLinks: [
     {
       name: 'About',
@@ -27,29 +28,9 @@ const config = {
       link: '/contact/',
     },
   ],
-  // Links to social profiles/projects you want to display in the author segment/navigation bar.
-  userLinks: [
-    {
-      label: 'GitHub',
-      url: 'https://github.com/sydrawat',
-      iconClassName: 'fa fa-github',
-    },
-    {
-      label: 'Twitter',
-      url: 'https://twitter.com/sydrawat',
-      iconClassName: 'fa fa-twitter',
-    },
-    {
-      label: 'Email',
-      url: 'mailto:sydrawat@gmail.com',
-      iconClassName: 'fa fa-envelope',
-    },
-  ],
   themeColor: '#C7A27C', // Used for setting manifest and progress theme colors.
   backgroundColor: '#EEE8E8', // Used for setting manifest background color.
 };
-
-// Validate
 
 // Make sure pathPrefix is empty if not needed
 if (config.pathPrefix === '/') {
