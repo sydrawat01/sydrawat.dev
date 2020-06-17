@@ -22,7 +22,7 @@ const IndexPage = () => (
         <div className="elevator">
           <h1>
             Hey, I&apos;m Sid
-            <span role="img" aria-label="wave">
+            <span className="wave" role="img" aria-label="wave">
               {' '}
               🖖🏻
             </span>

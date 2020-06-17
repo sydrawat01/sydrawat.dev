@@ -1483,3 +1483,27 @@ button[disabled] {
   background: #d9d7e0;
   color: black;
 }
+
+// hand-wave
+.wave {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 10px;
+  animation: shake 7s infinite;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  0% { transform: rotate( 15.0deg) }
+  10% { transform: rotate(-15.0deg) }
+  20% { transform: rotate( 15.0deg) }
+  30% { transform: rotate(-15.0deg) }
+  40% { transform: rotate( 15.0deg) }
+  50% { transform: rotate( -15.0deg) }
+  60% { transform: rotate( 15.0deg) }
+  70% { transform: rotate( -15.0deg) }
+  80% { transform: rotate( 15.0deg) }
+  90% { transform: rotate( -15.0deg) }
+ 100% { transform: rotate( 15.0deg) }
+}
