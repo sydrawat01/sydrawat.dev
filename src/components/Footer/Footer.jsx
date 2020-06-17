@@ -12,9 +12,6 @@ const Footer = () => {
     <footer className="footer container">
       <div>
         <a href="/">&copy; 2020 Sydrawat</a>
-        <a href="https://taniarascia.com" target="_blank" rel="noopener noreferrer">
-          Design
-        </a>
         <a
           href="https://github.com/sydrawat/sydrawat-issues/issues/new/choose"
           target="_blank"
@@ -23,6 +20,9 @@ const Footer = () => {
           Issues
         </a>
         <Link to="/contact/">Contact</Link>
+        <a href="https://sydrawat.netlify.app" target="_blank" rel="noopener noreferrer">
+          RSS
+        </a>
       </div>
       <div>
         <a
