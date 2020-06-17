@@ -1,6 +1,5 @@
 const urljoin = require('url-join');
 const config = require('./data/SiteConfig');
-const env = require('./.env');
 
 module.exports = {
   pathPrefix: config.pathPrefix === '' ? '/' : config.pathPrefix,
@@ -61,12 +60,6 @@ module.exports = {
           },
           'gatsby-remark-prismjs',
         ],
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: env.googleAnalyticsID,
       },
     },
     {
