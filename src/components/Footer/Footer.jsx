@@ -20,7 +20,7 @@ const Footer = () => {
           Issues
         </a>
         <Link to="/contact/">Contact</Link>
-        <a href="https://sydrawat.netlify.app" target="_blank" rel="noopener noreferrer">
+        <a href="https://sydrawat.netlify.app/rss.xml" target="_blank" rel="noopener noreferrer">
           RSS
         </a>
       </div>
