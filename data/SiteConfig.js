@@ -6,7 +6,7 @@ const config = {
   siteUrl: 'https://sydrawat.netlify.app',
   repo: 'https://github.com/sydrawat/sydrawat',
   pathPrefix: '',
-  siteDescription: 'Siddharth is a front-end software engineer  tinkering with React and GraphQL',
+  siteDescription: 'Siddharth is a front-end software engineer, tinkering with React and GraphQL',
   siteRss: '/rss.xml',
   postDefaultCategoryID: 'Tech',
   dateFromFormat: 'YYYY-MM-DD',

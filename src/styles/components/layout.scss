@@ -258,7 +258,7 @@
 
   h1 {
     margin: 0.5rem 0;
-    font-weight: 700;
+    font-weight: 900;
   }
 
   .post-meta {
@@ -728,7 +728,7 @@ h2.publication-company {
 }
 
 .post-meta {
-  font-size: 0.8rem;
+  font-size: 1.0rem;
   color: $light-font-color;
   display: inline-flex;
   align-items: center;
@@ -754,7 +754,7 @@ h2.publication-company {
 
 @include small-breakpoint {
   .post-meta {
-    font-size: 0.9rem;
+    font-size: 1.0rem;
   }
 }
 

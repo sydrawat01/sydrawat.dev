@@ -11,7 +11,7 @@ import graphql from '../../content/thumbnails/graphql.png';
 import javascript from '../../content/thumbnails/js.png';
 import yarn from '../../content/thumbnails/yarn-kitten-circle.png';
 import sass from '../../content/thumbnails/sass.png';
-import python from '../../content/thumbnails/python.png';
+import java from '../../content/thumbnails/java.svg';
 
 const IndexPage = () => (
   <Layout>
@@ -27,13 +27,22 @@ const IndexPage = () => (
               🖖🏻
             </span>
           </h1>
-          <p>I&apos;m glad you&apos;re here!</p>
           <p>
-            I&apos;m a Software Engineer from Bangalore, India. I love creating stuff on the web and
-            occasionally <Link to="/blog">write</Link> about random stuff.
+            Beep boop!{' '}
+            <span role="img" aria-label="robot">
+              🤖
+            </span>
+          </p>
+          <p>
+            I&apos;m an international masters student at{' '}
+            <a href="https://www.northeastern.edu/" target="_blank" rel="noopener noreferrer">
+              Northeastern University, Boston
+            </a>
+            . I love creating stuff on the web and occasionally write about stuff in my{' '}
+            <Link to="/blog">blog.</Link>
           </p>
           <h2>Tech</h2>
-          <p>A few skills that I&apos;m still updating everyday</p>
+          <p>Here are a few skills that I&apos;m still updating everyday!</p>
           <div className="skills">
             <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
               <img src={reactjs} alt="react" title="ReactJS" />
@@ -54,8 +63,8 @@ const IndexPage = () => (
             <a href="https://sass-lang.com" target="_blank" rel="noopener noreferrer">
               <img src={sass} alt="sass" title="SASS" />
             </a>
-            <a href="https://python.org" target="_blank" rel="noopener noreferrer">
-              <img src={python} alt="py" title="Python" />
+            <a href="https://dev.java/" target="_blank" rel="noopener noreferrer">
+              <img src={java} alt="java" title="Java" />
             </a>
           </div>
         </div>
