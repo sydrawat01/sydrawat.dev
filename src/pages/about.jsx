@@ -23,24 +23,35 @@ export default class Me extends Component {
             <div>
               <h2>whoami</h2>
               <p>
-                I&apos;m Sid, a freelance software developer mostly working in front-end development
-                with <a href="https://reactjs.org">React</a>. I&apos;m currently experimenting
-                around with <a href="https://graphql.org">GraphQL</a> and{' '}
+                I&apos;m Sid, in front-end developer working with{' '}
+                <a href="https://reactjs.org">React</a>. I love tinkering with{' '}
+                <a href="https://graphql.org">GraphQL</a> and{' '}
                 <a href="https://mongodb.com">MongoDB</a> as backend technologies to eventually
-                transition into a full-stack developer.
+                transition into a full-stack developer. I{' '}
+                <span aria-label="heart" role="img">
+                  ♥️
+                </span>{' '}
+                open-source!
               </p>
               <h3>Getting to know me</h3>
               <p>
-                I was born and raised in Dehradun before moving to Bangalore, India. I&apos;ve done
-                my engineering in Computer Science from{' '}
-                <a href="https://manipal.edu/mu.html">Manipal University</a>.
+                I&apos;m currently purusing my Master&apos;s degree in Information Systems from
+                <a href="https://wwww.northeastern.edu/"> Northeastern University, Boston.</a>
               </p>
               <p>
-                I graduated in 2017 and have been employed as a senior software developer at{' '}
-                <a href="https://www.wipro.com/en-IN/">Wipro</a>. I also dedicate my free time to
-                learning creating stuff and learning new things on the web.
+                I graduated in 2017 with a Bachelor&apos;s in Computer Science from{' '}
+                <a href="https://www.manipal.edu"> Manipal University, India </a>
+                and later worked as a senior software developer at{' '}
+                <a href="https://www.wipro.com/en-IN/">Wipro Technologies</a>.
               </p>
-              <p>I also like doodling in my free time. I guess I&apos;ll post some here as well!</p>
+              <p>
+                I have 3+ years of professional experience in Software Development. As I&apos;ve
+                grown as a developer, worked in conjunction with senior designers and developers who
+                have raised my standards for what is expected of any web application. Through these
+                experiences, I&apos;ve had the opportunity to create memorable products that are not
+                only delightful to use but are written in code that&apos;s efficient, highly
+                scalable, easy to understand and particularly maintainable.
+              </p>
               <h3>Tech Setup</h3>
               <div className="setup-container">
                 <a

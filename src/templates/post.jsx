@@ -9,7 +9,7 @@ import { formatDate } from '../utils/global';
 import PostTags from '../components/PostTags/PostTags';
 import SEO from '../components/SEO/SEO';
 import config from '../../data/SiteConfig';
-import sid from '../../content/images/sid1994.jpg';
+import sid from '../../content/images/disp.jpeg';
 import twitter from '../../content/images/twitter.svg';
 
 export default class PostTemplate extends Component {

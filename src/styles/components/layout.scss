@@ -885,7 +885,6 @@ blockquote {
   @extend .container;
 
   .quotation {
-    padding: 1rem;
     margin: 1rem 0;
     border: none;
     background: white;
@@ -903,7 +902,7 @@ blockquote {
       position: absolute;
       bottom: 1rem;
       right: 1.5rem;
-      color: rgba(0, 0, 0, 0.6);
+      // color: rgba(0, 0, 0, 0.6);
       margin-top: 1rem;
       font-size: 1.3rem;
       text-align: right;
@@ -1011,7 +1010,7 @@ blockquote {
 }
 
 .search {
-  margin-bottom: 0;
+  // margin-bottom: 0;
   display: block;
   border: 2px solid #ccc;
   border-radius: 6px;
@@ -1310,7 +1309,7 @@ button[disabled] {
   }
 
   p {
-    font-size: 1.4rem;
+    font-size: 2rem;
     color: rgba(255, 255, 255, 0.8) !important;
   }
 

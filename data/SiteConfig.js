@@ -4,7 +4,7 @@ const config = {
   siteTitleAlt: 'Siddharth Rawat',
   siteLogo: '/src/images/stickie.svg',
   siteUrl: 'https://sydrawat.netlify.app',
-  repo: 'https://github.com/sydrawat/sydrawat',
+  repo: 'https://github.com/sydrawat01/sydrawat.dev',
   pathPrefix: '',
   siteDescription: 'Siddharth is a front-end software engineer, tinkering with React and GraphQL',
   siteRss: '/rss.xml',

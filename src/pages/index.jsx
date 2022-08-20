@@ -5,7 +5,7 @@ import { Link } from 'gatsby';
 import Layout from '../layout';
 import SEO from '../components/SEO/SEO';
 import config from '../../data/SiteConfig';
-import sid from '../../content/images/sid1994.jpg';
+import sid from '../../content/images/disp.jpeg';
 import reactjs from '../../content/thumbnails/reactjs.svg';
 import graphql from '../../content/thumbnails/graphql.png';
 import javascript from '../../content/thumbnails/js.png';
@@ -42,7 +42,7 @@ const IndexPage = () => (
             <Link to="/blog">blog.</Link>
           </p>
           <h2>Tech</h2>
-          <p>Here are a few skills that I&apos;m still updating everyday!</p>
+          <p>Here are a few skills that I possess in my bag of tricks!</p>
           <div className="skills">
             <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
               <img src={reactjs} alt="react" title="ReactJS" />
@@ -72,7 +72,20 @@ const IndexPage = () => (
           <img src={sid} className="flashcard-avatar" alt="Sid" />
           <div>
             <h3>Sid</h3>
-            <p>Attending business meetings since &apos;94.</p>
+            <p>Northeastern &apos;23</p>
+            <p>
+              <span role="img" aria-label="ramen">
+                🍜
+              </span>
+              {'   '}
+              <span role="img" aria-label="web" width="100px">
+                🕸
+              </span>
+              {'   '}
+              <span role="img" aria-label="student">
+                👨‍🎓
+              </span>
+            </p>
           </div>
         </div>
       </div>

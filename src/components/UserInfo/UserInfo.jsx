@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'gatsby';
-import sid from '../../../content/images/sid1994.jpg';
+import sid from '../../../content/images/disp.jpeg';
 
 export default class UserInfo extends Component {
   render() {

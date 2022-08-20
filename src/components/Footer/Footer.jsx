@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <footer className="footer container">
       <div>
-        <a href="/">&copy; 2020 Sydrawat</a>
+        <a href="/">&copy; 2022 Sydrawat</a>
         <a
           href="https://github.com/sydrawat/sydrawat-issues/issues/new/choose"
           target="_blank"
