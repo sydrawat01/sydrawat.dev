@@ -20,6 +20,8 @@ body {
 @include small-breakpoint {
   body {
     font-size: $body-font-size;
+    font-weight: 300;
+    line-height: 1.7;
   }
 }
 
@@ -29,7 +31,10 @@ ul,
 dl,
 table {
   margin: 0 0 1.5rem 0;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.65;
+  // text-align: justify;
 }
 
 @include small-breakpoint {
@@ -39,7 +44,8 @@ table {
   dl,
   table {
     margin: 0 0 2rem 0;
-    font-size: 1.25rem;
+    font-size: 1.3rem;
+    // text-align: justify;
   }
 }
 
@@ -90,7 +96,7 @@ h3:not(:first-child) {
 // Heading individual styles
 h1 {
   font-size: $h1-mobile;
-  font-weight: 700;
+  font-weight: 900;
   letter-spacing: -0.03rem;
   code {
     font-size: $h1-mobile !important;
@@ -99,7 +105,7 @@ h1 {
 
 h2 {
   font-size: $h2-mobile;
-  font-weight: 700;
+  font-weight: 400;
   padding-bottom: 0.2rem;
   code {
     font-size: $h2-mobile !important;
@@ -108,19 +114,19 @@ h2 {
 
 h3 {
   font-size: $h3-mobile;
-  font-weight: 700;
+  font-weight: 300;
   color: lighten($heading-font-color, 20%);
 }
 
 h4 {
   font-size: $h4-mobile;
-  font-weight: 700;
+  font-weight: 300;
   color: lighten($heading-font-color, 40%);
 }
 
 h5 {
   font-size: $h5-mobile;
-  font-weight: 700;
+  font-weight:300;
 }
 
 @include small-breakpoint {

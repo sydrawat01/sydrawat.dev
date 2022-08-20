@@ -3,7 +3,6 @@ import { Link } from 'gatsby';
 import netlify from '../../../content/images/netlify.png';
 import gatsby from '../../../content/thumbnails/gatsby.png';
 import github from '../../../content/images/github.png';
-import kofi from '../../../content/images/ko-fi.png';
 import ig from '../../../content/images/ig.svg';
 import twitter from '../../../content/images/twitter.svg';
 
@@ -11,7 +10,7 @@ const Footer = () => {
   return (
     <footer className="footer container">
       <div>
-        <a href="/">&copy; 2020 Sydrawat</a>
+        <a href="/">&copy; 2022 Sydrawat</a>
         <a
           href="https://github.com/sydrawat/sydrawat-issues/issues/new/choose"
           target="_blank"
@@ -26,15 +25,7 @@ const Footer = () => {
       </div>
       <div>
         <a
-          href="https://ko-fi.com/sydrawat"
-          title="Buy me a Ko-Fi"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src={kofi} className="footer-img" alt="GitHub" />
-        </a>
-        <a
-          href="https://github.com/sydrawat"
+          href="https://github.com/sydrawat01"
           title="Open-source on GitHub"
           target="_blank"
           rel="noopener noreferrer"

@@ -168,6 +168,7 @@ module.exports = {
           `,
             output: config.siteRss,
             title: 'Siddharth Rawat - RSS Feed',
+            match: '^/blog/',
           },
         ],
       },
