@@ -12,7 +12,7 @@ const config = {
   dateFromFormat: 'YYYY-MM-DD',
   dateFormat: 'MMMM Do, YYYY',
   userName: 'Siddharth',
-  userEmail: 'sydrawat@gmail.com',
+  userEmail: 'siddharth.rawat94@gmail.com',
   userTwitter: 'sydrawat',
   menuLinks: [
     {
@@ -24,8 +24,8 @@ const config = {
       link: '/blog/',
     },
     {
-      name: 'Contact',
-      link: '/contact/',
+      name: 'Projects',
+      link: '/projects/',
     },
   ],
   themeColor: '#C7A27C', // Used for setting manifest and progress theme colors.

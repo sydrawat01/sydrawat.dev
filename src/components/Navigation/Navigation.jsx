@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'gatsby';
-import board from '../../images/stickie.svg';
+import stickie from '../../images/stickie.svg';
 import sun from '../../images/sun.svg';
 import moon from '../../images/moon.svg';
 import ThemeContext from '../../context/ThemeContext';
@@ -41,7 +41,7 @@ export default class Navigation extends Component {
         <div className="nav-container">
           <div className="brand">
             <Link to="/">
-              <img src={board} className="favicon" alt="MotherBoard" />
+              <img src={stickie} className="favicon" alt="stickie" />
               <span className="text">Siddharth Rawat</span>
             </Link>
           </div>

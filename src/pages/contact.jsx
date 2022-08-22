@@ -7,7 +7,7 @@ import config from '../../data/SiteConfig';
 import github from '../../content/thumbnails/github.svg';
 import twitter from '../../content/images/twitter.svg';
 import linkedin from '../../content/thumbnails/linkedin.svg';
-import mail from '../../content/thumbnails/mail.svg';
+import ig from '../../content/images/ig.svg';
 import reddit from '../../content/thumbnails/reddit.svg';
 
 export default class Contact extends Component {
@@ -48,11 +48,11 @@ export default class Contact extends Component {
                   <img src={linkedin} alt="Linkedin" />
                 </a>
                 <a
-                  href="mailto:siddharth.rawat94@gmail.com"
+                  href="https://www.instagram.com/sydrawat"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img src={mail} alt="Mail" />
+                  <img src={ig} alt="instagram" />
                 </a>
               </div>
               <h4 style={{ fontWeight: 'lighter', fontSize: `${1.3}rem` }}>

@@ -35,7 +35,7 @@ export default class Me extends Component {
               </p>
               <h3>Getting to know me</h3>
               <p>
-                I&apos;m currently purusing my Master&apos;s degree in Information Systems from
+                I&apos;m currently pursuing my Master&apos;s degree in Information Systems from
                 <a href="https://wwww.northeastern.edu/"> Northeastern University, Boston.</a>
               </p>
               <p>

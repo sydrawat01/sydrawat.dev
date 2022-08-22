@@ -2,8 +2,9 @@ import React from 'react';
 import { Link } from 'gatsby';
 import netlify from '../../../content/images/netlify.png';
 import gatsby from '../../../content/thumbnails/gatsby.png';
-import github from '../../../content/images/github.png';
-import ig from '../../../content/images/ig.svg';
+import github from '../../../content/thumbnails/github.svg';
+import mail from '../../../content/thumbnails/mail.svg';
+import linkedin from '../../../content/thumbnails/linkedin.svg';
 import twitter from '../../../content/images/twitter.svg';
 
 const Footer = () => {
@@ -23,22 +24,25 @@ const Footer = () => {
           RSS
         </a>
       </div>
-      <div>
+      <div className="contact-container">
         <a
           href="https://github.com/sydrawat01"
-          title="Open-source on GitHub"
+          title="Open-sourcerer on GitHub"
           target="_blank"
           rel="noopener noreferrer"
         >
           <img src={github} className="footer-img" alt="GitHub" />
         </a>
         <a
-          href="https://www.instagram.com/sydrawat"
-          title="Artsy me!"
+          href="https://www.linkedin.com/siddharth-rawat"
+          title="Mr. Professional"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={ig} className="footer-img" alt="Netlify" />
+          <img src={linkedin} className="footer-img" alt="LinkedIn" />
+        </a>
+        <a href="mailto:siddharth.rawat94@gmail.com" target="_blank" rel="noopener noreferrer">
+          <img src={mail} className="footer-img" alt="Mail" />
         </a>
         <a
           href="https://www.netlify.com/"
