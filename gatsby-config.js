@@ -83,14 +83,15 @@ module.exports = {
         background_color: config.backgroundColor,
         theme_color: config.themeColor,
         display: 'minimal-ui',
+        icon: 'static/logos/logo-1024.png',
         icons: [
           {
-            src: '/logos/logo-512.png',
+            src: 'static/logos/logo-512.png',
             sizes: '512x512',
             type: 'image/png',
           },
           {
-            src: '/logos/logo-1024.png',
+            src: 'static/logos/logo-1024.png',
             sizes: '1024x1024',
             type: 'image/png',
           },

@@ -496,4 +496,22 @@ $dark-primary: $tag;
   path {
     stroke: $keyword;
   }
+  .project {
+    border: 1px solid $accent;
+    background: $accent;
+    color: white;
+    &:hover {
+      background: darken($accent, 7%);
+    }
+
+    .links {
+      a {
+        border: 3px solid transparent;
+        color: $dark-primary;
+        &:hover {
+          color: darken($dark-primary, 15%);
+        }
+      }
+    }
+  }
 }

@@ -71,8 +71,8 @@ const IndexPage = () => (
         <div className="flashcard-section">
           <img src={sid} className="flashcard-avatar" alt="Sid" />
           <div>
-            <h3>Sid</h3>
-            <p>Northeastern &apos;23</p>
+            <h3>Siddharth Rawat</h3>
+            <h3>Northeastern &apos;23</h3>
             <p>
               <span role="img" aria-label="ramen">
                 🍜
