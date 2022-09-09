@@ -65,4 +65,4 @@ Before you create an issue, please go through the [Code of Conduct](https://gith
 
 Thanks for reporting the problem!
 
-##### &copy; 2020, Siddharth Rawat
+##### &copy; 2022, Siddharth Rawat
