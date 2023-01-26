@@ -7,13 +7,6 @@ import projectsList from '../data/projectList';
 import Layout from '../layout/index';
 import SEO from '../components/SEO/SEO';
 import config from '../../data/SiteConfig';
-// import takeNote from '../../content/thumbnails/tn.png';
-// import laconia from '../../content/images/laconiaproject.png';
-// import primitive from '../../content/images/primitiveproject.png';
-// import chip8 from '../../content/images/chip8project.png';
-// import newMoon from '../../content/images/new-moon.svg';
-// import keyboardAccordion from '../../content/images/keyboardaccordionlogo.png';
-// import github from '../assets/nav-github.png';
 import star from '../../content/thumbnails/star.svg';
 
 export default function ProjectsIndex() {
@@ -63,6 +56,11 @@ export default function ProjectsIndex() {
                     target="_blank"
                     rel="noreferrer"
                   >
+                    Source
+                  </a>
+                )}
+                {project.org && (
+                  <a href={`https://github.com/${project.org}`} target="_blank" rel="noreferrer">
                     Source
                   </a>
                 )}

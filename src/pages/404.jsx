@@ -23,14 +23,15 @@ export default class NotFoundPage extends Component {
   render() {
     return (
       <Layout>
-        <Helmet title={`Page not found – ${config.siteTitle}`} />
+        <Helmet title={`Page not found | ${config.siteTitle}`} />
         <SEO />
         <div className="container">
           <div className="text-center">
             <h1>404</h1>
           </div>
           <p>
-            A fatal exception 0E has occurred at <span className="addr"> 0x74616e6961 </span> in 404: page not found. {/*eslint-disable-line */}
+            A fatal exception 0E has occurred at <span className="addr"> 0x74616e6961 </span> in
+            404: page not found. {/*eslint-disable-line */}
           </p>
           <div className="list">
             <p>

@@ -1,16 +1,23 @@
 const projectsList = [
   {
-    name: 'React Boilerplate',
-    date: '2021',
-    slug: 'react-boilerplate',
-    tagline: 'A free, open source React template with Redux Toolkit, TypeScript & React Router.',
-    url: 'https://boilerplate-react-ts.web.app/',
+    name: 'VoskhodXIV (CloudOps)',
+    date: '2022',
+    org: 'VoskhodXIV',
+    tagline:
+      'A production ready REST API w/ Github Actions using NodeJS, Express and Postgres. Deployed using AWS CloudFormation IaC integrating S3, RDS, Cloudwatch and EC2 using a custom AMI built using Packer.',
   },
   {
     name: 'React Pocket Notes',
     date: '2021',
     tagline: 'Pocket-sized notes for React, TypeScript & Redux Toolkit.',
     url: 'https://sydrawat.gitbook.io/react/',
+  },
+  {
+    name: 'React Boilerplate',
+    date: '2021',
+    slug: 'react-boilerplate',
+    tagline: 'A free, open source React template with Redux Toolkit, TypeScript & React Router.',
+    url: 'https://boilerplate-react-ts.web.app/',
   },
   {
     name: "Bob's Burgers",

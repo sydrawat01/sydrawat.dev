@@ -16,7 +16,7 @@ export default class Contact extends Component {
   render() {
     return (
       <Layout>
-        <Helmet title={`Contact – ${config.siteTitle}`} />
+        <Helmet title={`Contact | ${config.siteTitle}`} />
         <SEO />
         <div className="container">
           <div className="lead">
