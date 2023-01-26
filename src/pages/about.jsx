@@ -16,7 +16,7 @@ export default class Me extends Component {
   render() {
     return (
       <Layout>
-        <Helmet title={`About Me – ${config.siteTitle}`} />
+        <Helmet title={`About Me | ${config.siteTitle}`} />
         <SEO />
         <div className="container">
           <div>

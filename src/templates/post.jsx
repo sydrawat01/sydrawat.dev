@@ -40,7 +40,7 @@ export default class PostTemplate extends Component {
     return (
       <Layout>
         <Helmet>
-          <title>{`${post.title} – ${config.siteTitle}`}</title>
+          <title>{`${post.title} | ${config.siteTitle}`}</title>
         </Helmet>
         <SEO postPath={slug} postNode={postNode} postSEO />
         <article className="single container">

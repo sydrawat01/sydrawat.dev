@@ -11,11 +11,11 @@ import graphql from '../../content/thumbnails/graphql.png';
 import javascript from '../../content/thumbnails/js.png';
 import yarn from '../../content/thumbnails/yarn-kitten-circle.png';
 import sass from '../../content/thumbnails/sass.png';
-import java from '../../content/thumbnails/java.svg';
+import aws from '../../content/thumbnails/aws.svg';
 
 const IndexPage = () => (
   <Layout>
-    <Helmet title={`${config.siteTitle} – Front End Engineer`} />
+    <Helmet title={`${config.siteTitle} | ☁️ Engineer`} />
     <SEO />
     <div className="container">
       <div className="lead">
@@ -44,6 +44,9 @@ const IndexPage = () => (
           <h2>Tech</h2>
           <p>Here are a few skills that I possess in my bag of tricks!</p>
           <div className="skills">
+            <a href="https://aws/" target="_blank" rel="noopener noreferrer">
+              <img src={aws} alt="aws" title="AWS" />
+            </a>
             <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
               <img src={reactjs} alt="react" title="ReactJS" />
             </a>
@@ -63,9 +66,6 @@ const IndexPage = () => (
             <a href="https://sass-lang.com" target="_blank" rel="noopener noreferrer">
               <img src={sass} alt="sass" title="SASS" />
             </a>
-            <a href="https://dev.java/" target="_blank" rel="noopener noreferrer">
-              <img src={java} alt="java" title="Java" />
-            </a>
           </div>
         </div>
         <div className="flashcard-section">
@@ -79,7 +79,7 @@ const IndexPage = () => (
               </span>
               {'   '}
               <span role="img" aria-label="web" width="100px">
-                🕸
+                ☁️
               </span>
               {'   '}
               <span role="img" aria-label="student">

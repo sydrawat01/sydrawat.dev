@@ -7,11 +7,17 @@ import mail from '../../../content/thumbnails/mail.svg';
 import linkedin from '../../../content/thumbnails/linkedin.svg';
 import twitter from '../../../content/images/twitter.svg';
 
+const getYear = () => {
+  const d = new Date();
+  return d.getFullYear();
+};
+
 const Footer = () => {
+  const copyYear = getYear();
   return (
     <footer className="footer container">
       <div>
-        <a href="/">&copy; 2022 Sydrawat</a>
+        <a href="/">&copy; {copyYear} Sydrawat</a>
         <a
           href="https://github.com/sydrawat/sydrawat-issues/issues/new/choose"
           target="_blank"
