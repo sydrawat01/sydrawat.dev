@@ -9,9 +9,11 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d6bfe026-2092-462a-99c7-45efeec9eca0/deploy-status)](https://app.netlify.com/sites/sydrawat/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ea482c58-e733-4ed9-a52d-c3bf14748b0b/deploy-status)](https://app.netlify.com/sites/sydrawat/deploys)
 
-This is my personal `profile cum blog` where I write down my thought and notes about the interisting stuff I'm learning about the web everyday!
+This is my personal profile/blog where I write down my thought and notes about the interesting stuff I'm learning about the web everyday!
+
+> NOTE: This website is using an older build of GatsbyJS, so to run this project successfully, you'll need Node v14.15.1
 
 ## :rocket: Quick start
 
@@ -65,4 +67,4 @@ Before you create an issue, please go through the [Code of Conduct](https://gith
 
 Thanks for reporting the problem!
 
-##### &copy; 2022, Siddharth Rawat
+##### &copy; 2023, Siddharth Rawat
