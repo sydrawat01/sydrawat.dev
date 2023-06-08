@@ -6,6 +6,8 @@ import github from '../../../content/thumbnails/github.svg';
 import mail from '../../../content/thumbnails/mail.svg';
 import linkedin from '../../../content/thumbnails/linkedin.svg';
 import twitter from '../../../content/images/twitter.svg';
+import discord from '../../../content/thumbnails/discord.svg';
+import mastodon from '../../../content/thumbnails/mastodon.svg';
 
 const getYear = () => {
   const d = new Date();
@@ -51,20 +53,20 @@ const Footer = () => {
           <img src={mail} className="footer-img" alt="Mail" />
         </a>
         <a
-          href="https://www.netlify.com/"
-          title="Hosted by Netlify"
+          href="https://mastodon.social/@sydrawat"
+          title="Sid @ Mastodon"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={netlify} className="footer-img" alt="Netlify" />
+          <img src={mastodon} className="footer-img" alt="Mastodon" />
         </a>
         <a
-          href="https://www.gatsbyjs.org/"
-          title="Built with Gatsby"
+          href="https://discordapp.com/users/710386344781676574"
+          title="Sid @ Discord"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={gatsby} className="footer-img" alt="Gatsby" />
+          <img src={discord} className="footer-img" alt="Discord" />
         </a>
         <a
           href="https://www.twitter.com/sydrawat"
