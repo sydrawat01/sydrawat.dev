@@ -33,15 +33,15 @@ const Footer = () => {
       <div className="contact-container">
         <a
           href="https://github.com/sydrawat01"
-          title="Open-sourcerer on GitHub"
+          title="Open source contributor on GitHub"
           target="_blank"
           rel="noopener noreferrer"
         >
           <img src={github} className="footer-img" alt="GitHub" />
         </a>
         <a
-          href="https://www.linkedin.com/siddharth-rawat"
-          title="Mr. Professional"
+          href="https://www.linkedin.com/in/siddharth-rawat/"
+          title="Siddharth Rawat @ Linkedin"
           target="_blank"
           rel="noopener noreferrer"
         >
