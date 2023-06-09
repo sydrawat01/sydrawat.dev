@@ -37,8 +37,13 @@
     letter-spacing: -0.03rem;
   }
 
-  .flashcard-section .flashcard-avatar {
-    display: none;
+  .flashcard-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    .flashcard-avatar {
+      display: block;
+    }
   }
 
   p {

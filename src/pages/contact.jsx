@@ -24,10 +24,14 @@ export default class Contact extends Component {
               <h2>Contact</h2>
               <p>
                 The fastest way to reach me is through{' '}
-                <a href="https://www.linkedin.com/siddharth-rawat"> LinkedIn</a>, or
+                <a href="https://www.linkedin.com/in/siddharth-rawat"> LinkedIn</a>, or
                 <a href="mailto:siddharth.rawat94@gmail.com"> e-mail</a>.
               </p>
-              <p>Hit me you if you feel like getting in touch with me!</p>
+              <p>
+                Hit me up if you feel like getting in touch with me or want to contribute to any of
+                my open-source projects!
+              </p>
+              <p>Want to collaborate on a project together? Count me in!</p>
               <h3>Social</h3>
               <p>Make sure you check me out elsewhere too! ;)</p>
               <div className="contact-container">

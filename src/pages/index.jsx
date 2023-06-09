@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { Link } from 'gatsby';
 
 import Layout from '../layout';
 import SEO from '../components/SEO/SEO';
@@ -9,9 +8,12 @@ import sid from '../../content/images/disp.jpeg';
 import reactjs from '../../content/thumbnails/reactjs.svg';
 import graphql from '../../content/thumbnails/graphql.png';
 import javascript from '../../content/thumbnails/js.png';
-import yarn from '../../content/thumbnails/yarn-kitten-circle.png';
-import sass from '../../content/thumbnails/sass.png';
+// import yarn from '../../content/thumbnails/yarn-kitten-circle.png';
+// import sass from '../../content/thumbnails/sass.png';
 import aws from '../../content/thumbnails/aws.svg';
+import k8s from '../../content/thumbnails/kubernetes.svg';
+import docker from '../../content/thumbnails/docker.svg';
+import tf from '../../content/thumbnails/terraform.svg';
 
 const IndexPage = () => (
   <Layout>
@@ -27,27 +29,44 @@ const IndexPage = () => (
               🖖🏻
             </span>
           </h1>
-          <p>
+          {/* <p>
             Beep boop!{' '}
             <span role="img" aria-label="robot">
               🤖
             </span>
+          </p> */}
+          <p>
+            I&apos;m a passionate{' '}
+            <span role="img" aria-label="web" width="100px">
+              ☁️{' '}
+            </span>
+            full-stack developer with 3+ years of professional experience creating beautiful, highly
+            efficient web applications.
           </p>
           <p>
-            I&apos;m an international masters student at{' '}
+            {' '}
+            Currently pursuing a Master&apos;s degree in Information Systems from{' '}
             <a href="https://www.northeastern.edu/" target="_blank" rel="noopener noreferrer">
-              Northeastern University, Boston
+              Northeastern University, Boston.
             </a>
-            . I love creating stuff on the web and occasionally write about stuff in my{' '}
-            <Link to="/blog">blog.</Link>
+            Let&apos;s work together to build a better web!
           </p>
           <h2>Tech</h2>
-          <p>Here are a few skills that I possess in my bag of tricks!</p>
+          <p>Here are few of the skills that I possess in my repertoire</p>
           <div className="skills">
             <a href="https://aws/" target="_blank" rel="noopener noreferrer">
               <img src={aws} alt="aws" title="AWS" />
             </a>
-            <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.docker.com/" target="_blank" rel="noopener noreferrer">
+              <img src={docker} alt="docker" title="Docker" />
+            </a>
+            <a href="https://kubernetes.io/" target="_blank" rel="noopener noreferrer">
+              <img src={k8s} alt="k8s" title="Kubernetes" />
+            </a>
+            <a href="https://www.terraform.io/" target="_blank" rel="noopener noreferrer">
+              <img src={tf} alt="k8s" title="Hashicorp Terraform" />
+            </a>
+            <a href="https://react.dev/" target="_blank" rel="noopener noreferrer">
               <img src={reactjs} alt="react" title="ReactJS" />
             </a>
             <a href="https://graphql.org" target="_blank" rel="noopener noreferrer">
@@ -60,12 +79,12 @@ const IndexPage = () => (
             >
               <img src={javascript} alt="js" title="Javascript" />
             </a>
-            <a href="https://yarnpkg.com" target="_blank" rel="noopener noreferrer">
+            {/* <a href="https://yarnpkg.com" target="_blank" rel="noopener noreferrer">
               <img src={yarn} alt="yarn" title="Yarn Package Manager" />
             </a>
             <a href="https://sass-lang.com" target="_blank" rel="noopener noreferrer">
               <img src={sass} alt="sass" title="SASS" />
-            </a>
+            </a> */}
           </div>
         </div>
         <div className="flashcard-section">
