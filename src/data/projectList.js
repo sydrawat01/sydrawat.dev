@@ -9,6 +9,7 @@ const projectsList = [
   {
     name: 'React Pocket Notes',
     date: '2021',
+    slug: 'gitbooks/tree/master/react',
     tagline: 'Pocket-sized notes for React, TypeScript & Redux Toolkit.',
     url: 'https://sydrawat.gitbook.io/react/',
   },
@@ -49,6 +50,12 @@ const projectsList = [
     slug: 'qrifi',
     tagline: 'Generate a QR code for your WiFi!',
     url: 'https://qr-ifi.web.app/',
+  },
+  {
+    name: 'K8s for dummies',
+    slug: 'gitbooks/tree/master/k8s',
+    tagline: 'Beginners guide to kubernetes',
+    url: 'https://sids-digital-garden.gitbook.io/k8s-4-dummies/',
   },
 ];
 

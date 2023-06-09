@@ -3,7 +3,7 @@ const config = {
   siteTitleShort: 'sydrawat',
   siteTitleAlt: 'Siddharth Rawat',
   siteLogo: '/src/images/stickie.svg',
-  siteUrl: 'https://sydrawat.netlify.app',
+  siteUrl: 'https://sydrawat.me',
   repo: 'https://github.com/sydrawat01/sydrawat.dev',
   pathPrefix: '',
   siteDescription: 'Siddharth is a software engineer, tinkering with full-stack cloud native apps',

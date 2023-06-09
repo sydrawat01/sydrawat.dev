@@ -16,9 +16,9 @@ export default class UserInfo extends Component {
                 <Link to="/">Sydrawat</Link>
               </h3>
               <p>
-                Hey, I’m <a href="https://twitter.com/sydrawat">Sid</a>, a front-end software
+                Hey, I’m <a href="https://twitter.com/sydrawat">Sid</a>, a full-stack software
                 engineer. Every now and then I like to write down my personal thoughts floating
-                beyond the space-time continnum.
+                beyond the space-time continuum.
               </p>
               <blockquote className="quotation">
                 <p>
