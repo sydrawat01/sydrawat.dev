@@ -64,7 +64,7 @@
     "prettier": "^2.0.5",
     "sass": "^1.53.0",
     "stylefmt": "^6.0.3",
-    "stylelint": "^11.0.0",
+    "stylelint": "^15.10.1",
     "stylelint-config-standard": "^19.0.0"
   },
   "keywords": [
