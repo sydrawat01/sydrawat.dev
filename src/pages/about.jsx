@@ -23,36 +23,62 @@ export default class Me extends Component {
           <div>
             <div>
               <h2>whoami</h2>
+              <p>Hey, I&apos;m Sid! </p>{' '}
               <p>
-                Hi, I&apos;m Sid! I&apos;m a full-stack developer with a passion for creating
-                efficient, scalable, and easy-to-maintain web applications. I specialize in{' '}
-                <a href="https://react.dev/">React </a>
-                and love to experiment with back-end technologies like{' '}
-                <a href="https://expressjs.com/">ExpressJS</a> and{' '}
-                <a href="https://www.postgresql.org/">Postgres</a>, while also tinkering with cloud
-                technologies such as <a href="https://www.terraform.io/">Terraform</a>. As an
-                open-source enthusiast, I believe in the power of collaboration and constantly seek
-                ways to improve my skills by contributing to the community. I{' '}
-                <span aria-label="heart" role="img">
-                  ♥️
+                <span aria-label="grad-hat" role="img">
+                  🎓
                 </span>{' '}
-                open-source!
+                I&apos;m a Graduate student pursuing my Masters in Information Systems at the
+                College of Engineering in{' '}
+                <a href="https://northeastern.edu">Northeastern University, Boston.</a>
+              </p>
+              <p>
+                <span aria-label="curious" role="img">
+                  🧐
+                </span>{' '}
+                I am interested in Site Reliability Engineering, DevOps and Fullstack Engineering! I
+                just finished my Spring &apos;23 Co-op as a Software Engineer at{' '}
+                <a href="https://github.com/Boehringer-Ingelheim">@Boehringer-Ingelheim USA</a>,
+                developing GPT powered chatbots for medical websites using Azure OpenAI & Power
+                Virtual Agents, using Kubernetes and Helm Charts to deploy a highly available
+                cluster for the chatbots. As an open-source enthusiast, I believe in the power of
+                collaboration and constantly seek ways to improve my skills by contributing to the
+                community.
               </p>
               <h3>Getting to know me</h3>
               <p>
-                Currently, I&apos;m pursuing my Master&apos;s degree in Information Systems from
-                <a href="https://wwww.northeastern.edu/"> Northeastern University in Boston</a>.
-                Before that, I graduated with a Bachelor&apos;s degree in Computer Science from
+                <span aria-label="building" role="img">
+                  🏢
+                </span>{' '}
+                Prior to my Master&apos;s degree at{' '}
+                <a href="https://wwww.northeastern.edu/">Northeastern</a>, I graduated with a
+                Bachelor&apos;s degree in Computer Science from
                 <a href="https://www.manipal.edu"> Manipal University, India </a>, and worked as a
-                senior software developer at
-                <a href="https://www.wipro.com/en-IN/">Wipro Technologies</a>.
+                Senior Software Engineer in the PaaS team for Ericsson, Hungary at{' '}
+                <a href="https://www.wipro.com/en-IN/"> Wipro Technologies.</a>
               </p>
               <p>
-                Over the past 3+ years, I&apos;ve gained extensive experience in software
-                development, working closely with senior designers and developers to elevate my
-                standards for web &apos;m proud to have contributed to creating memorable products
-                that are delightful to use, highly scalable, and written with clean, maintainable
-                code.
+                <span aria-label="student" role="img">
+                  🧑‍💻
+                </span>{' '}
+                Currently, I am working on a project where I work with a Highly Available{' '}
+                <a href="https://kubernetes.io/"> Kubernetes</a> cluster which hosts a Dockerized
+                REST API and other microservices that are deployed on a regional, multi-nodal
+                private <a href="https://cloud.google.com/kubernetes-engine?hl=en">GKE cluster</a>{' '}
+                using <a href="https://helm.sh/">Helm Charts.</a> I&apos;m using{' '}
+                <a href="https://github.com/prometheus-community/helm-charts/blob/main/charts/kube-prometheus-stack/README.md">
+                  Prometheus and Grafana
+                </a>{' '}
+                for logging and monitoring of metrics on the cluster. A custom health check on this
+                REST API is done by a Highly Available <a href="https://kafka.apache.org/">Kafka</a>{' '}
+                cluster (deployed using the{' '}
+                <a href="https://bitnami.com/stack/kafka/helm">Bitnami Kafka Helm Chart</a> as a
+                dependency) on the same{' '}
+                <a href="https://cloud.google.com/kubernetes-engine?hl=en">GKE cluster</a> using the
+                traditional producer-consumer model. The health check runs as a CronJob using a
+                custom <a href="https://sdk.operatorframework.io/">Kubernetes operator</a> written
+                in Go and built using{' '}
+                <a href="https://book.kubebuilder.io/cronjob-tutorial/api-design">Kubebuilder.</a>
               </p>
               <h3>Tech Setup</h3>
               <div className="setup-container">
@@ -91,8 +117,8 @@ export default class Me extends Component {
             </div>
             <div>
               <h4 style={{ fontWeight: 'lighter', fontSize: `${1.3}rem` }}>
-                Thank you for visiting my website! If you have any questions or would like to
-                collaborate on a project, feel free to <Link to="/contact">reach out to me</Link>.
+                If you have any questions or would like to collaborate on a project, feel free to{' '}
+                <Link to="/contact">reach out to me</Link>.
               </h4>
             </div>
           </div>

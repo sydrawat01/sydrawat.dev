@@ -40,7 +40,7 @@ You can then use `tsc` to compile your typescript files.
 
 The proper way to compile a typescript file is:
 
-```shell
+```bash
 tsc input.ts output.js
 ```
 
@@ -48,17 +48,17 @@ The above command will convert (compile) the code in `input.ts` file, which is a
 
 In case your input and output files have the same name, and only differ in the extension, then you can use the shorthand to compile the `.ts` file like so:
 
-```shell
+```bash
 tsc sandbox.ts
 ```
 
 The above line will compile `sandbox.ts` into `sandbox.js`.
 
-Eveerytime we make a change in `.ts` file, we need to manually compile it to convert it to `.js`. It would be nice if this could be done automatically, right?
+Everytime we make a change in `.ts` file, we need to manually compile it to convert it to `.js`. It would be nice if this could be done automatically, right?
 
 This is easy to do, we just need to a the `-w` flag in the compile command, like so:
 
-```shell
+```bash
 tsc sandbox.ts -w
 ```
 
@@ -334,7 +334,7 @@ This is the basic folder structure of any project. So here, we move our `index.h
 
 The problem that we will face here is when we compile our typescript file, the output file is stored in `src/` instead of `public/`.
 
-```shell
+```bash
 tsc src/sandbox.ts
 ```
 
@@ -342,7 +342,7 @@ The above command will result in creation of a `sandbox.js` file inside the `src
 
 To overcome this issue, we use the `tsconfig.json` file.
 
-```shell
+```bash
 tsc --init
 ```
 
@@ -367,7 +367,7 @@ The `tsconfig.json` that is created will have default config for your typescript
 
 With these configs, we can just use the following command to compile our `.ts` files:
 
-```shell
+```bash
 tsc -w
 ```
 

@@ -38,8 +38,8 @@ export default function ProjectsIndex() {
           <div className="container">
             <h1>Projects</h1>
             <p className="description">
-              A few highlights of my open-source projects. View them all{' '}
-              <a href="https://github.com/sydrawat01">on GitHub</a>.
+              Here are a few highlights of my open-source projects. Check them out{' '}
+              <a href="https://github.com/sydrawat01">on my GitHub</a>.
             </p>
           </div>
         </header>
