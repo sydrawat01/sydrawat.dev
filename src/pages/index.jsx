@@ -18,7 +18,7 @@ import tux from '../../content/thumbnails/linux.svg';
 
 const IndexPage = () => (
   <Layout>
-    <Helmet title={`${config.siteTitle} | ☁️ Engineer`} />
+    <Helmet title={`${config.siteTitle} | SRE | DevOps | Cloud`} />
     <SEO />
     <div className="container">
       <div className="lead">
@@ -53,17 +53,21 @@ const IndexPage = () => (
             Let&apos;s work together to build better reliable systems!
           </p>
           <h2>Tech</h2>
-          <p>Here are few of the skills that I possess in my repertoire</p>
+          <p>Below are some of the skills I possess in my toolkit</p>
         </div>
         <div className="flashcard-section">
           <div className="card-content">
             <img src={sid} className="flashcard-avatar" alt="Sid" />
-            <div>
+            <div className="avatar-data">
               <h3>Siddharth Rawat</h3>
-              <h3>Northeastern &apos;23</h3>
+              <h3>Northeastern &apos;24</h3>
               <p>
                 <span role="img" aria-label="ramen">
                   🍜
+                </span>
+                {'   '}
+                <span role="img" aria-label="kubernetes">
+                  ⎈
                 </span>
                 {'   '}
                 <span role="img" aria-label="web" width="100px">

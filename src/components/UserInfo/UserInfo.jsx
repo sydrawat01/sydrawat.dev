@@ -13,21 +13,22 @@ export default class UserInfo extends Component {
             </div>
             <div className="few-words">
               <h3>
-                <Link to="/">Sydrawat</Link>
+                <Link to="/">siddharth.</Link>
               </h3>
               <p>
-                Hey, I’m <a href="https://twitter.com/sydrawat">Sid</a>, a full-stack software
-                engineer. Every now and then I like to write down my personal thoughts floating
-                beyond the space-time continuum.
+                Hey, I&apos;m <a href="https://twitter.com/sydrawat">Sid</a>, a{' '}
+                <strong>Backend Engineer</strong> specializing in <strong>Kubernetes</strong>,{' '}
+                <strong>Site Reliability</strong>, <strong>DevOps</strong>, and{' '}
+                <strong>Cloud technologies</strong>.
               </p>
-              <blockquote className="quotation">
+              {/* <blockquote className="quotation">
                 <p>
                   Every one of us is, in the cosmic perspective, precious. If a human disagrees with
                   you, let him live. In a hundred billion galaxies, you will not find another.
                 </p>
                 <footer>Cosmos, Part 13: Who Speaks for Earth?(1980)</footer>{' '}
                 <cite>- Carl Sagan</cite>
-              </blockquote>
+              </blockquote> */}
             </div>
           </div>
         </div>

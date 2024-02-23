@@ -6,7 +6,8 @@ const config = {
   siteUrl: 'https://sydrawat.me',
   repo: 'https://github.com/sydrawat01/sydrawat.dev',
   pathPrefix: '',
-  siteDescription: 'Siddharth is a software engineer, tinkering with full-stack cloud native apps',
+  siteDescription:
+    'Siddharth Rawat is a skilled Backend Engineer specializing in Kubernetes, Site Reliability, DevOps, and Cloud technologies.',
   siteRss: '/rss.xml',
   postDefaultCategoryID: 'Tech',
   dateFromFormat: 'YYYY-MM-DD',

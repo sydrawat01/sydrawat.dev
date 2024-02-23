@@ -42,7 +42,7 @@ export default class Navigation extends Component {
           <div className="brand">
             <Link to="/">
               <img src={stickie} className="favicon" alt="stickie" />
-              <span className="text">Siddharth Rawat</span>
+              <span className="text">siddharth.</span>
             </Link>
           </div>
           <div className="links">
