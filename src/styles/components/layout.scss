@@ -1305,6 +1305,13 @@ button[disabled] {
   box-shadow: 0.5rem 1.25rem 1.75rem 0 rgba(100, 110, 140, 0.4);
   color: rgba(255, 255, 255, 0.9);
 
+  .card-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   .flashcard-avatar {
     margin-top: 0.5rem;
     border-radius: 50%;

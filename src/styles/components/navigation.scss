@@ -36,12 +36,12 @@
       align-items: center;
       color: #333;
       margin-right: 0;
-      font-weight: 500;
-      font-size: 1.15rem;
+      font-weight: 600;
+      font-size: 1.25rem;
 
       &:hover,
       &:focus {
-        color: black;
+        color: $primary-color;
       }
     }
 
@@ -122,7 +122,8 @@ button.dark-switcher {
 
     .brand {
       a {
-        font-size: 1.3rem;
+        font-size: 2rem;
+        color: #777f88;
       }
 
       .text {
