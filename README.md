@@ -13,7 +13,8 @@
 
 This is my personal profile/blog where I write down my thought and notes about the interesting stuff I'm learning about the web everyday!
 
-> NOTE: This website is using an older build of GatsbyJS, so to run this project successfully, you'll need Node v14.15.1
+> \[!IMPORTANT]\
+> This website is using an older build of GatsbyJS, so in order to run this project successfully, you'll need Node v14.21.3
 
 ## :rocket: Quick start
 
@@ -46,6 +47,65 @@ This is my personal profile/blog where I write down my thought and notes about t
 
 > NOTE : For deployment, follow the [Gatsby AWS S3 guide](https://www.gatsbyjs.org/docs/deploying-to-s3-cloudfront/) for more detailed steps on how to deploy the site on AWS. If you're looking for different resources to deploy/host your site, have a look [here](https://www.gatsbyjs.org/docs/deploying-and-hosting/).
 
+## :whale: Containerization
+
+The containerized image of this personal website is available on [hub.docker.com/r/sydrawat/sydrawat.dev](https://hub.docker.com/r/sydrawat/sydrawat.dev/tags). In order to use this locally, or to deploy this on a Kubernetes cluster, make sure you use the appropriate image and tag names.
+
+1. **Local Development with Docker**
+
+   ```bash
+   docker pull sydrawat/sydrawat.dev:<tag>
+   # docker pull sydrawat/sydrawat.dev:latest
+   ```
+
+2. **Run the container locally**
+
+   ```bash
+   # The -p option exposes the application running on port 8000 on the container
+   # to port 8000 on the host machine running the container
+   docker run -p 8000:8000 sydrawat/sydrawat.dev
+   ```
+
+   The application should now be accessible on [http://localhost:8000](http://localhost:8000)
+
+3. **Deployment on Kubernetes**
+
+   Deployment on Kubernetes can vary, depending on how you want your application to be available. This is a simple example on how to run the website, which is containerized, as a Pod on a Kubernetes cluster.
+
+   ```bash
+   kubectl run sydrawat --image=sydrawat/sydrawat.dev:latest
+   ```
+
+   Next, we need to expose the application on a `NodePort`:
+
+   ```yaml
+   apiVersion: v1
+   kind: Service
+   metadata:
+     labels:
+       app: sydrawat-svc
+     name: sydrawat-svc
+     namespace: default
+   spec:
+     ports:
+     - name: 8000-8000
+       nodePort: 31136
+       port: 8000
+       protocol: TCP
+       targetPort: 8000
+     selector:
+       run: sydrawat
+     type: NodePort
+   ```
+
+   You can now test the application running on http://<node-ip>:31136
+   To identify what node your Pod is running on, use:
+
+   ```bash
+   kubectl get pods -o wide # identify the node on which this pod is running
+   kubectl get nodes -o wide # get the node-ip
+   ```
+
 ## :busts_in_silhouette: Acknowledgements
 
 - Ruben Harutyunyan - [Gatsby Advanced Starter](https://github.com/Vagr9K/gatsby-advanced-starter/tree/master/content)
@@ -67,4 +127,4 @@ Before you create an issue, please go through the [Code of Conduct](https://gith
 
 Thanks for reporting the problem!
 
-##### &copy; 2023, Siddharth Rawat
+##### &copy; 2024, Siddharth Rawat
